@@ -1,0 +1,94 @@
+/* Reset visual básico */
+body {
+    margin: 0;
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior */
+.header {
+    padding: 15px;
+    background: #0a0a0a;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.cerrar {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Contenedor general dividido en 2 columnas */
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* Zona izquierda: video */
+.video-section {
+    flex: 70%;
+    position: relative;
+    background: black;
+}
+
+/* Iframe del video ocupa todo el espacio disponible */
+#drivePlayer {
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+/* Zona derecha: info del video/anime */
+.info-section {
+    flex: 30%;
+    background: #111;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Cabecera del panel derecho */
+.info-header {
+    display: flex;
+    gap: 15px;
+}
+
+.poster {
+    width: 80px;
+    height: 110px;
+    border-radius: 8px;
+}
+
+/* Botones de reacción */
+.reacciones {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.react {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.react:hover {
+    background: #555;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .video-section {
+        height: 60vh;
+    }
+
+    .info-section {
+        height: auto;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>k-on!_peli_ES.net</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Barra superior con botón de cerrar -->
+    <div class="header">
+        <span class="cerrar">✕ Cerrar</span>
+    </div>
+
+    <!-- Contenedor principal (video izquierda + info derecha) -->
+    <div class="container">
+
+        <!-- Sección del video -->
+        <div class="video-section">
+
+            <!-- Iframe donde cargaremos el video de Drive -->
+            <iframe id="drivePlayer"
+                    frameborder="0"
+                    allow="autoplay"
+                    allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <!-- Panel derecho con la información del anime/peli -->
+        <div class="info-section">
+
+            <div class="info-header">
+                <img src="movie\peli_on!.png" class="poster">
+
+                <div>
+                    <h3>K-On!: La Película (2011)</h3>
+                    <p>Animación, Aventura, Comedia, Familiar, Música</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>Trailer [OV]</h2>
+
+            <!-- Reacciones estilo plataformas -->
+            <div class="reacciones">
+                <button class="react">👍 5</button>
+                <button class="react">💗 2</button>
+                <button class="react">👏 0</button>
+                <button class="react">😂 0</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

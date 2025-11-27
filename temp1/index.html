@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-ON! Fanweb けいおん！</title>
+<link rel="canonical" href="https://hizui23.github.io/k-on27fanweb-esp-latino.net" />
+
+    
+    <meta name="google-site-verification" content="pW6HdCNS9ypibQ2nwb1RTrrwS7xqn8zMXeKj2h0FXwA" />
+
+<!-- esta parte es el indexado de la web para que al momento de compartir en enlace, aparesca la descripcion-->
+    <meta name="description" content="Fan web hispana dedicada al anime K-ON! けいおん！ Disfruta episodios y contenido sin publicidad ni acortadores. Un espacio hecho por fans, para fans.">
+    <meta name="keywords" content="K-ON, K-ON español, K-ON fan web, K-ON anime, KyoAni, Yui Hirasawa, anime sin publicidad, comunidad hispana K-ON">
+    <meta name="author" content="Hizui Dev">
+    <meta name="robots" content="index, follow">
+
+    
+    <meta property="og:title" content="K-ON! Fanweb けいおん！ | Ver sin anuncios">
+    <meta property="og:description" content="Disfruta de la serie K-ON! en español, con contenido, sin acortadores ni rastreadores.">
+    <meta property="og:image" content="https://hizui23.github.io/K-on-_Ver_ESP-Fanweb-27/img/yui-con-web.png">
+    <meta property="og:url" content="https://hizui23.github.io/K-on-_Ver_ESP-Fanweb-27/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="K-ON! Fanweb けいおん！ | Comunidad hispana sin anuncios">
+    <meta name="twitter:description" content="Explora la fan web hispana de K-ON! sin publicidad, con curiosidades, info y comunidad abierta.">
+    <meta name="twitter:image" content="https://hizui23.github.io/K-on-_Ver_ESP-Fanweb-27/img/yui-con-web.png">
+
+    <link rel="stylesheet" href="style_temp1.css">
+    <link rel="icon" href="img/yui-con-web.png">
+</head>
+
+
+  </style>
+</head>
+<body>
+
+  <!-- esta parte es un aviso emergente donde hay dos botones que hacen diferentes cosas-->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <p>
+        Esta web no contiene publicidad, acortadores con anuncios, 
+        rastreadores o redirecciones maliciosas. <br>
+        <span>Para la comunidad y nuevos ❤️</span>
+      </p>
+      <button id="continueBtn">Continuar</button>
+      <button id="thanksBtn">Gracias</button>
+    </div>
+  </div>
+
+  <div class="thankyou" id="thankyou">
+    
+    <img src="https://media1.tenor.com/m/Jkkee7dZOsgAAAAC/keion-k-on.gif" alt="Gracias!">
+  </div>
+
+  <script>
+    
+    const popup = document.getElementById("popup");
+    const continueBtn = document.getElementById("continueBtn");
+    const thanksBtn = document.getElementById("thanksBtn");
+    const thankyou = document.getElementById("thankyou");
+
+    
+    continueBtn.addEventListener("click", () => {
+      popup.style.display = "none"; 
+    });
+
+    
+    thanksBtn.addEventListener("click", () => {
+      popup.style.display = "none"; 
+      thankyou.style.display = "block"; 
+
+      
+      setTimeout(() => {
+        thankyou.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+<body>
+<!-- esta parte es un video de fondo como background, en baja resolucion y comprimido-->
+     <video autoplay muted loop id="bg-video">
+        <source src="videos\Wallpaper Engine  K On!! Yui Solo (B).mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>K-ON! en español けいおん！</h1>
+        <p>K-ON! es un anime de comedia y slice of life que sigue a un grupo de chicas que forman una banda en el club de música ligera de su escuela. Con una vibra relajada, humor y momentos tiernos, muestra su amistad y pasión por la música.
+Animado por <b>kyoto animation</b> y basado en el <b>manga de kakifly</b>.</p>
+<!-- esta parte son dos bottones que llevan a el twiter del autor y a la paguina de kyoani-->
+<button class="creadores" data-url="https://x.com/kakifly">
+      Autor Mangaka Kakifly
+    </button>
+
+<button class="creadores" data-url="https://www.tbs.co.jp/anime/k-on">
+      web de K-on por kyoani
+    </button>
+    <!-- este es un gif que sale al acercar el puntero al logo de k-on! -->
+        <div class="logo-container">
+            <img src="img/logouwu.png" alt="K-ON Logo" id="kon-logo">
+            <img src="https://pa1.aminoapps.com/6191/eff9357f770244078c32337f4f31d065c48475b2_00.gif" alt="Yui Hirasawa" id="yui-img">
+        </div>
+    </header>
+
+    <!--parte de los caps, funcionan desde drive, asi no depende de una nube y tengo un backup de los caps en otra cuenta si tumban los links-->
+    <main>
+    <h2>Episodios</h2>
+    <!-- la clase grid engloba todo el view de los caps-->
+     <!-- si vez dos <div> tipo
+                <div> </div> es por que no conseguia ajustar los elementos xd, no se mucho de desarrollo web, solo lenguajes para desarollo de videojuegos xd-->
+    <div class="episodes-grid">
+        
+        <div class="episode-card">
+            <img src="cap_preview/1cap.png" alt="Ep 1">
+            <h3>Ep. 1 - ¡Disuelvan el club!</h3>
+            <p>Yui busca un club escolar... y termina uniéndose al club de música ligera.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1nn5VEaXoEvh3R6bj0mZ4bjcA25jqjbFF/preview')">Ver</button>
+                <button onclick="openModal('https://drive.google.com/file/d/1EtUIz7G64Wpqax6nbnlK7nV4XUxARIgd/preview')">Ver DOBLADO</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1nn5VEaXoEvh3R6bj0mZ4bjcA25jqjbFF&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\2cap.png" alt="Ep 2">
+            <h3>Ep. 2 - ¡Instrumento! </h3>
+            <p>yui sin guitarra se pone a chambear para comprar una con la ayuda de las demas chicas.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1GL4UmS0ymP5uxCd63wHRbUTfpO9dJ_Uj/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1GL4UmS0ymP5uxCd63wHRbUTfpO9dJ_Uj&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\3cap.png" alt="Ep 3">
+            <h3>Ep. 3 - sesion de estudios</h3>
+            <p>yui es mala estudiando, tanto que debe aprobar para evitar que se cierre el club.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/13ZM9TkMElmsYGcCSNVm-B9P7fSzPNnyj/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=13ZM9TkMElmsYGcCSNVm-B9P7fSzPNnyj&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\4cap.png" alt="Ep 4">
+            <h3>Ep. 4 - campamento de estudio</h3>
+            <p>Yui y las chicas van al mar, pero casi olvidan practicar .</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1tdXEpQvCoWww7ogJX37ngW12m3xBwSMO/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1dA7velMnhMmxXHI2Rh_8jYIbqCxhi-xs&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\5cap.png" alt="Ep 5">
+            <h3>Ep. 5 - asesor</h3>
+            <p>El club consige nuevo asesor y descubren la historia de la asesora...</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/193rCBFVKVQtDknAqhi25j8AoTwyfsTJV/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=193rCBFVKVQtDknAqhi25j8AoTwyfsTJV&export=download&authuser=0')">Descargar</button>
+            </div>
+         </div> <div class="episode-card">
+            <img src="cap_preview\6cap.png" alt="Ep 6">
+            <h3>Ep. 6 - Festival escolar</h3>
+            <p>llega la temporada del festival escolar y la primera participacion.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1ZMjmC23i6LWxgaZoUcIcx3-oHkenLMj0/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1ZMjmC23i6LWxgaZoUcIcx3-oHkenLMj0&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\7cap.png" alt="Ep 7">
+            <h3>Ep. 7 - navidad!</h3>
+            <p>Las chicas quedan en casa de yui para la fiesta de navidad, que dulce navidad uwu.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1TyfvcqRZV2bBxIEDVPzlMiLACC-9RSY8/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1TyfvcqRZV2bBxIEDVPzlMiLACC-9RSY8&export=download&authuser=0')">Descargar</button>
+            </div>
+         </div> <div class="episode-card">
+            <img src="cap_preview\8cap.png" alt="Ep 8">
+            <h3>Ep. 8 - nuevo ingreso!</h3>
+            <p>¡Comienza el segundo año de preparatoria. Ui Hirasawa ingresa a la Preparatoria Sakuragaoka junto con una chica llamada Azusa.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1Uf9EJBlBegxLjkPbhyaR35ljcG5-a9f1/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1Uf9EJBlBegxLjkPbhyaR35ljcG5-a9f1&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\9cap.png" alt="Ep 9">
+            <h3>Ep. 9 - nuevo miembro del club!</h3>
+            <p>Azusa se une al Club de Música Ligera , pero siente que el grupo es demasiado relax e informal, duda quedarse.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1H0aWtsq-Ly1IOkYiZ70xaGQUVoTnrBxN/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1H0aWtsq-Ly1IOkYiZ70xaGQUVoTnrBxN&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\10cap.png" alt="Ep 10">
+            <h3>Ep. 10 - ¡Otro campamento de entrenamiento!</h3>
+            <p>Las chicas van a una de las villas de Tsumugi para otro campamento. Como antes, la práctica no da muchos frutos y terminan jugando.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1Qy7s_tBu2bo2-e9JnhAxZ5VF2-B6dem1/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1Qy7s_tBu2bo2-e9JnhAxZ5VF2-B6dem1&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\11cap.png" alt="Ep 11">
+            <h3>Ep. 11 - ¡Crisis!</h3>
+            <p>Se acerca el festival escolar. El Club de Música Ligera volverá a actuar, pero surgen problemas, el mayor de ellos una disputa entre Ritsu y Mio.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1wAGLw9ZEQgHlWm20ao6ffe_5lV0FhNgR/preview')">Ver</button>
+                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=1wAGLw9ZEQgHlWm20ao6ffe_5lV0FhNgR&export=download&authuser=0')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\12cap.png" alt="Ep 12">
+            <h3>Ep. 12 - ¡Música ligera!</h3>
+            <p>Yui tiene fiebre y no puede ensayar para el próximo festival escolar. El Club se siente inseguro de actuar sin ella, pero al final logran dar su concierto con Yui.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1T41KDprqSpp5gmncVZczu2yNhZwDhHi1/preview')">Ver</button>
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\13cap.png" alt="Ep 13">
+            <h3>Ep <B>Extra</B>. 13 - ¡Días de invierno!</h3>
+            <p>Durante los fríos días de invierno, Yui Hirasawa intenta encontrar a alguien con quien tomar nabe , pero resulta que todos tienen otras cosas que hacer.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/15j0N1bHQLID-nDRE3162PhkWyA3HvTAg/preview')">Ver</button>
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+         </div> <div class="episode-card">
+            <img src="cap_preview\14cap.png" alt="Ep 14">
+            <h3>Ep<B>OVA</B>. 14 - ¡Vive en casa!</h3>
+            <p>Maki invita al club a tocar en una sala de conciertos en Nochevieja, donde Catherine se reencuentra con Janice. Episodio exclusivo del anime, <b>lanzado como OVA en la séptima edición en DVD/Blu-ray de K-ON!</b>.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://drive.google.com/file/d/1exn8suL4r7Zb7Is-MzUezzUfHLn9ojli/preview')">Ver</button>
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+    
+     </main>
+            <div id="proxCAP"><h3>!proximanemte temporada 2 y capitulos de ura-on!</h3></div>
+   
+    <footer>
+        <p>Hecho por HizuiDev27 💻🎸, sin fines de lucro, | 軽音部、永遠に！, comunity web for otakus of k-on! in spanish <b>no alojamos ningun archivo</b></p>
+    </footer>
+
+   
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- es un easter egg al darle click al logo de k_on!-->
+    <div id="yui-fullscreen">
+        <img src="img\keioncitas=v2.gif" alt="Yui Hirasawa">
+        <p>¡Has encontrado a las koncitas! 🎶</p>
+    </div>
+
+    <script src="script_view.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
