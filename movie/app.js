@@ -5,7 +5,7 @@
 */
 
 // 1️⃣ URL de Google Drive (la pegas COMPLETA tal cual)
-const linkDrive = "https://drive.google.com/file/d/15Xk9pa_B8uQPtPqIkh9zU8TILJ7vnaDY/view?usp=drive_link";
+const linkDrive = "https://drive.google.com/file/d/15Xk9pa_B8uQPtPqIkh9zU8TILJ7vnaDY/view?usp=sharing";
 
 
 // 2️⃣ Función que transforma cualquier URL de Drive al formato /preview

@@ -3,6 +3,15 @@
    ESTILOS OPTIMIZADOS PARA LOBBY
    ================================
 */
+p {
+    color: #ffe6f2;
+  text-shadow:
+    2px 2px 0 #ff1a75,
+    -2px 2px 0 #ff1a75,
+    2px -2px 0 #ff1a75,
+    -2px -2px 0 #ff1a75;
+    font-size: 3rem;
+}
 
 
 body {
@@ -76,6 +85,19 @@ body {
     color: white;
     /* Añadir una sombra sutil para profundidad */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.manga {
+    width: 200px; /* Aumentar ligeramente el ancho para un mejor visual */
+    background: #252544;
+    border-radius: 12px; /* Ligeramente más redondeado */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición para sombra */
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    /* Añadir una sombra sutil para profundidad */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
 }
 
 .card:hover {
@@ -151,6 +173,7 @@ body {
 
     .main-header h1 {
         font-size: 2.2rem;
+
     }
 
     /* En móviles, las tarjetas se apilan y centran */
