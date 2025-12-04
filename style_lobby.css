@@ -100,17 +100,17 @@ body {
 
 }
 
-.card:hover {
-    transform: translateY(-5px) scale(1.05); /* Mejor efecto: levitar y escalar */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más fuerte al hacer hover */
+.card:hover, .manga:hover { /* <- Se añade .manga:hover */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
-
 .card img {
     width: 100%;
-    height: 300px; /* Aumentar ligeramente la altura de la imagen */
+    height: 300px;
     object-fit: cover;
-    border-bottom: 3px solid #ffb6c1; /* Borde inferior para separar visualmente */
+    border-bottom: 3px solid #ffb6c1;
 }
+
 
 .card-content {
     padding: 15px 10px; /* Aumentar el padding vertical */
@@ -193,4 +193,48 @@ body {
         align-items: center;
         gap: 30px;
     }
+}
+.card img, .manga img { /* <- Se añade .manga img */
+    width: 100%;
+    height: 300px; /* Aumentar ligeramente la altura de la imagen */
+    object-fit: cover;
+    border-bottom: 3px solid #ffb6c1; /* Borde inferior para separar visualmente */
+}
+
+/* Contenedor de los botones */
+.manga .buttons {
+    /* Usamos flexbox para alinear los botones horizontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+    padding: 15px 0 15px 0; /* Espacio interior arriba y abajo */
+}
+
+/* Estilo general del botón */
+.manga button {
+    /* Colores y forma inspirados en los botones de la vista de episodios */
+    background-color: #ffb6c1; /* Rosa claro */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    
+    /* Animación para transiciones suaves */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el ratón (Hover) */
+.manga button:hover {
+    background-color: #ff89a5; /* Rosa más oscuro */
+    transform: scale(1.05); /* Ligeramente más grande */
+}
+
+/* Estilos para asegurar que el contenido de la tarjeta manga se vea bien */
+/* Aseguramos que el contenido esté centrado como las demás tarjetas */
+.manga .card-content {
+    padding: 15px 10px; 
+    text-align: center;
 }
