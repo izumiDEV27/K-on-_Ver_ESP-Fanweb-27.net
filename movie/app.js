@@ -33,3 +33,11 @@ const linkPreview = convertirDrive(linkDrive);
 
 
 document.getElementById("drivePlayer").src = linkPreview;
+
+function downloadEpisode(url) {
+    if (url) {
+        window.open(url, "_blank");
+    } else {
+        alert("¡Aún no hay link de descarga!");
+    }
+}
