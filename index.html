@@ -7,15 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="visual_elements/yui-con-web-principal.png">
     <link rel="stylesheet" href="style_lobby.css"> <!-- bug incono, no sale-->
+   
 </head>
+<!--parte de mensaje emergente de desarollo-->
+  <div id="popupOverlay">
+        <div id="popup">
+            <h2>anuncio de desarrollo</h2>
+            <p class="mensaje-emergente">✨correxión de bugs visuales pc✨<br>✨bug de view mobile fixieada✨
+            <br>⇒ segunda temporada en desarrollo ⇐ <br>⇒ capitulos Ura-On en desarrollo ⇐ <br> ✍️agregando karaoke y los subtitulos son mas naturales✍️
+            <br>
+            </p>
+            <button id="closePopup">OK</button>
+        </div>
+    </div>
 <body>
     
     <video autoplay muted loop id="bg-video">
-        <source src="temporada1/videos/Wallpaper Engine  K On!! Yui Solo (B).mp4" type="video/mp4">
+        <source src="/visual_elements/background.mp4" type="video/mp4">
     </video>
     <header class="main-header">
         <img src="temporada1/img/logouwu.png" alt="Logo K-ON!" class="header-logo">
-        <p>Temporadas, OVAs y más</p1>
+        <p class="subtiulo">Temporadas, OVAs y más</p1>
     </header>
 
     <div class="contenedor">

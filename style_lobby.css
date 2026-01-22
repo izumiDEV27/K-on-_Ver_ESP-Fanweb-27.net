@@ -3,14 +3,9 @@
    ESTILOS OPTIMIZADOS PARA LOBBY
    ================================
 */
-p {
+.subtitulo {
     color: #ffe6f2;
-  text-shadow:
-    2px 2px 0 #ff1a75,
-    -2px 2px 0 #ff1a75,
-    2px -2px 0 #ff1a75,
-    -2px -2px 0 #ff1a75;
-    font-size: 3rem;
+    font-size: 50%;
 }
 
 
@@ -43,6 +38,7 @@ body {
     /* Añadir un fondo semi-transparente para que el título destaque sobre el video */
     background-color: rgba(0, 0, 0, 0.4); 
     padding: 20px 0;
+    border-radius: 3%;
 }
 
 .main-header h5 {
@@ -52,17 +48,7 @@ body {
     font-weight: 400;
 }
 
-.main-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fd0026; /* Rojo de K-ON! */
-    /* Efecto de sombra blanca similar al de temp1/style_temp1.css */
-    text-shadow:
-        -1px -1px 0 white,
-         1px -1px 0 white,
-        -1px  1px 0 white,
-         1px  1px 0 white;
-}
+
 
 /* Contenedor de las tarjetas */
 .contenedor {
@@ -238,3 +224,54 @@ body {
     padding: 15px 10px; 
     text-align: center;
 }
+
+/*parte de mensaje emergente de proceso de desarrollo e implemetación*/
+ #popupOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Caja del pop-up */
+        #popup {
+            background-color: #a59d9d2c; /* vibes cute rosa */
+            border: 2px solid #69aaffbd;
+            border-radius: 15px;
+            padding: 30px 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Botón de cerrar */
+        #popup button {
+            background-color: #0695e7;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            transition: 0.3s;
+            
+        }
+
+        #popup button:hover {
+            background-color: #ff85c1;
+        }
+        /*parte del mensaje de enmedio*/
+        .mensaje-emergente {
+        font-size: 85%;
+        color: #ffffff;
+        
+        }
