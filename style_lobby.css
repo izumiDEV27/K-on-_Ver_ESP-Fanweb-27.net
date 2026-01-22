@@ -241,11 +241,11 @@ body {
 
         /* Caja del pop-up */
         #popup {
-            background-color: #a59d9d2c; /* vibes cute rosa */
+            background-color: #00000060; /* vibes cute rosa */
             border: 2px solid #69aaffbd;
             border-radius: 15px;
             padding: 30px 20px;
-            width: 90%;
+            width: 60%;
             max-width: 400px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
