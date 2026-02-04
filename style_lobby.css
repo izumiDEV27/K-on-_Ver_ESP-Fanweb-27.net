@@ -38,7 +38,7 @@ body {
     /* Añadir un fondo semi-transparente para que el título destaque sobre el video */
     background-color: rgba(0, 0, 0, 0.4); 
     padding: 20px 0;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .main-header h5 {
