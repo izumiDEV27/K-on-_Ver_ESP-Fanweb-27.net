@@ -5,7 +5,7 @@
 */
 .subtitulo {
     color: #ffe6f2;
-    font-size: 50%;
+    font-size: 50px;
 }
 
 
@@ -275,3 +275,14 @@ body {
         color: #ffffff;
         
         }
+
+      
+footer {
+  width: 100%;
+  
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.267);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
