@@ -1,4 +1,4 @@
-// Abre el enlace de descarga
+// Abre el enlace de descarga o avisa si no, lo basico xd
 function download_manga(url) {
     if (url) {
         window.open(url, "_blank");
