@@ -5,7 +5,7 @@
 */
 .subtitulo {
     color: #ffe6f2;
-    font-size: 50px;
+    font-size: 180%;
 }
 
 
@@ -38,10 +38,10 @@ body {
 .main-header {
     text-align: center;
     margin-bottom: 30px;
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.288); 
     padding: 20px;         /* Ajuste simple */
-    border-radius: 0 0 10px 10px; /* Estético: solo bordes inferiores redondeados si toca arriba */
-    margin-top: 40px;      /* Para separar del techo si quieres */
+    border-radius: 10px; /* Estético: solo bordes inferiores redondeados si toca arriba */
+    margin-top: 30px;      /* Para separar del techo si quieres */
 }
 
 .main-header h5 {
@@ -279,12 +279,12 @@ body {
         }
         /*parte del mensaje de enmedio*/
         .mensaje-emergente {
-        font-size: 85%;
-        color: #ffffff;
+        font-size: 80%;
+        color: #fffdfd;
+        font-family: sans-josefin;
         
         }
 
-      
 footer {
   width: 100%;
   padding: 1rem;
