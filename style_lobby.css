@@ -19,6 +19,7 @@ body {
     display: flex;          /* Activa Flexbox */
     flex-direction: column; /* Organiza los hijos (header, contenedor, footer) en columna */
     padding: 0;             /* Quitamos padding para que el footer toque los bordes */
+
 }
 
 /* --- ESTILOS PARA EL VIDEO DE FONDO (#bg-video) --- */
@@ -307,4 +308,78 @@ footer {
     
     /* Opcional a gusto: es por quiero que la gente pueda hacer clic en lo que hay DEBAJO de la imagen */
     pointer-events: none; 
+}
+
+/* El contenedor principal */
+.carrusel-contenedor {
+    position: relative; /* Para poder posicionar las flechas encima */
+    width: 100%;
+    max-width: 800px; /* Ancho máximo para que no se vea gigante en PC */
+    margin: 50px auto; /* Centrado en la página */
+}
+
+/* La pista donde están los elementos (lo que se mueve) */
+.carrusel-track {
+    display: flex;
+    gap: 20px; /* Espacio entre cada tarjeta */
+    overflow-x: auto; /* Permite el scroll horizontal */
+    scroll-behavior: smooth; /* Suaviza el movimiento al hacer clic */
+    
+    /* MAGIA: Esto activa el "imán" */
+    scroll-snap-type: x mandatory; 
+    
+    /* Ocultar la barra de scroll (opcional, estético) */
+    scrollbar-width: none; /* Firefox */
+}
+
+.carrusel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+/* Cada tarjeta individual */
+.carrusel-item {
+    min-width: 250px; /* Ancho fijo de cada tarjeta */
+    height: 350px;
+    background: #c490d18a;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* MAGIA: Esto dice "cuando sueltes el scroll, alinéame al centro" */
+    scroll-snap-align: center; 
+}
+
+.carrusel-item img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Estilo de las flechas (Botones) */
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: rgb(252, 250, 250);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 18px;
+}
+
+.flecha-izquierda { left: -20px; }
+.flecha-derecha { right: -20px; }
+
+/* En móvil, ocultamos las flechas porque es más fácil deslizar con el dedo */
+@media (max-width: 768px) {
+    .carrusel-flecha {
+        display: none;
+    }
 }
