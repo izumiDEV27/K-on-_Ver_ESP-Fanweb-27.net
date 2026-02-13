@@ -6,7 +6,7 @@ function download_manga(url) {
         alert("¡Aún no hay link de descarga!");
     }
 }
-
+//que ves uwu >w< che cringe hahah
 function ver_manga(url) {
     if (url) {
         window.open(url, "_blank");
@@ -34,16 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const personaje = document.querySelector('.personaje-flotante');
 
     function moverAleatoriamente() {
-        // Obtenemos el tamaño de la ventana (viewport)
+        // tamano de  (viewport)
         const anchoVentana = window.innerWidth;
         const altoVentana = window.innerHeight;
 
-        // Obtenemos el tamaño de la imagen para que no se salga de la pantalla
+        // saco el tamaño de la imagen para que no se salga de la pantalla
         const anchoImagen = personaje.clientWidth;
         const altoImagen = personaje.clientHeight;
 
         // Calculamos una posición aleatoria (Math.random da un n° entre 0 y 1)
-        // Restamos el tamaño de la imagen para que no quede cortada en los bordes
+        // Restamos el tamaño de la imagen para que no quede cortada en los bordes xd
         const randomX = Math.random() * (anchoVentana - anchoImagen);
         const randomY = Math.random() * (altoVentana - altoImagen);
 
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     moverAleatoriamente();
 
     // 2. Repetir el movimiento cada 2000 milisegundos (2 segundos)
-    // NOTA: Si cambias el tiempo en el CSS, cámbialo aquí también para que coincidan.
+    // NOTA: Si cambio el tiempo en el CSS, debo cambiar aquí también para que coincidan.
     setInterval(moverAleatoriamente, 2000);
 });
+//que ves chismoso, hahahah, esta web es estatica, no me pidad milagros
