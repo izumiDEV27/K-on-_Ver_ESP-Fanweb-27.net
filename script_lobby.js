@@ -29,3 +29,33 @@ const popupOverlay = document.getElementById('popupOverlay');
                 popupOverlay.style.display = 'none';
             }
         });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const personaje = document.querySelector('.personaje-flotante');
+
+    function moverAleatoriamente() {
+        // Obtenemos el tamaño de la ventana (viewport)
+        const anchoVentana = window.innerWidth;
+        const altoVentana = window.innerHeight;
+
+        // Obtenemos el tamaño de la imagen para que no se salga de la pantalla
+        const anchoImagen = personaje.clientWidth;
+        const altoImagen = personaje.clientHeight;
+
+        // Calculamos una posición aleatoria (Math.random da un n° entre 0 y 1)
+        // Restamos el tamaño de la imagen para que no quede cortada en los bordes
+        const randomX = Math.random() * (anchoVentana - anchoImagen);
+        const randomY = Math.random() * (altoVentana - altoImagen);
+
+        // Aplicamos las nuevas coordenadas
+        personaje.style.left = randomX + 'px';
+        personaje.style.top = randomY + 'px';
+    }
+
+    // 1. Mover inmediatamente al cargar
+    moverAleatoriamente();
+
+    // 2. Repetir el movimiento cada 2000 milisegundos (2 segundos)
+    // NOTA: Si cambias el tiempo en el CSS, cámbialo aquí también para que coincidan.
+    setInterval(moverAleatoriamente, 2000);
+});

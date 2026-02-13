@@ -4,14 +4,14 @@
    ================================
 */
 .subtitulo {
-    color: #ffe6f2;
-    font-size: 180%;
+    color: #f5eef1;
+    font-size: 200%;
 }
 
 
 body {
     font-family: "Poppins", sans-serif;
-    color: white;
+    color: rgb(27, 228, 228);
     margin: 0;
     
     /* CAMBIOS CLAVE AQUÍ: */
@@ -65,7 +65,7 @@ body {
     flex: 1;                /* Esto hace que este div crezca y empuje el footer hacia abajo */
     width: 100%;            /* Asegura ancho completo */
     align-self: center;     /* Centra el contenedor en el eje cruzado */
-    padding: 40px 20px;     /* Movemos el padding aquí para que el contenido no pegue al borde */
+      
 }
 
 .card {
@@ -286,11 +286,25 @@ body {
         }
 
 footer {
-  width: 100%;
-  padding: 1rem;
+  
   background: rgba(0, 0, 0, 0.288); /* Un poco más oscuro para legibilidad */
-  color: white;
+  color: rgb(227, 147, 230);
   text-align: center;
   border-radius: 8px; /* <- esta parte la quito si quiero que se vea como barra completa de lado a lado */
   margin-top: auto; /* Asegura doblemente que se vaya al fondo */
+}
+.personaje-flotante {
+    position: fixed; /* Flota sobre el contenido */
+    width: 150px;    /* Ajusta el tamaño a tu gusto */
+    z-index: 9999;   /* Asegura que esté ENCIMA de todo (header, footer, etc.) */
+    
+    /* Inicialmente en la esquina superior izquierda */
+    top: 0;
+    left: 0;
+    
+    /* ¡Magia! Esto hace que el movimiento tarde 2 segundos y sea suave */
+    transition: top 2s ease-in-out, left 2s ease-in-out;
+    
+    /* Opcional: Si quieres que la gente pueda hacer clic en lo que hay DEBAJO de la imagen */
+    pointer-events: none; 
 }
