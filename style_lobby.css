@@ -259,6 +259,16 @@ body {
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             font-family: 'Arial', sans-serif;
+            display: flex;
+    flex-direction: column;
+    align-items: center;   /* centra horizontal */
+    /*parte temp*/
+    .padreon {
+    max-width: 300px;   /* ajusta a tu gusto */
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* opcional si quieres que se vea más nice */
+}
         }
 
         /* Botón de cerrar */
@@ -274,6 +284,8 @@ body {
             transition: 0.3s;
             
         }
+        
+        
 
         #popup button:hover {
             background-color: #ff85c1;
