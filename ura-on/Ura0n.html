@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>うらおん！uraon!</title>
+
+     <script src="/ura-on/ura-0n.js"></script>
+    <link rel="stylesheet" href="/ura-on/Ura0n.css">
+    <link rel="icon" href="/visual_elements/favicon-uraon.png">
+</head>
+
+
+  </style>
+</head>
+<body>
+<img src="/visual_elements/k-on-anime.gif" class="gif-left">
+  <!-- esta parte es un aviso emergente donde hay dos botones que hacen diferentes cosas-->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <p>
+        aun en desarollo<br> recuerda compartir la web 
+        <span>🗿las <b>keioncitas</b> son eternas🗿</span>
+      </p>
+      <button id="continueBtn">Continuar</button>
+      <button id="thanksBtn">Gracias</button>
+    </div>
+  </div>
+
+  <div class="thankyou" id="thankyou">
+    
+    <img src="https://media1.tenor.com/m/0FIPjst00YUAAAAC/k-on-k-on-ritsu.gif" alt="Gracias!">
+  </div>
+
+  <script>
+    
+    const popup = document.getElementById("popup");
+    const continueBtn = document.getElementById("continueBtn");
+    const thanksBtn = document.getElementById("thanksBtn");
+    const thankyou = document.getElementById("thankyou");
+
+    
+    continueBtn.addEventListener("click", () => {
+      popup.style.display = "none"; 
+    });
+
+    
+    thanksBtn.addEventListener("click", () => {
+      popup.style.display = "none"; 
+      thankyou.style.display = "block"; 
+
+      
+      setTimeout(() => {
+        thankyou.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+<body>
+<!-- esta parte es un video de fondo como background, en baja resolucion y comprimido-->
+     <video autoplay muted loop id="bg-video">
+        <source src="/visual_elements/background.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1>URA-ON! <br>SUB en español</h1>
+<!-- esta parte son dos bottones que llevan a el twiter del autor y a la paguina de kyoani-->
+<button class="creadores" data-url="https://x.com/kakifly">
+      Autor Mangaka Kakifly
+    </button>
+
+<button class="creadores" data-url="https://www.tbs.co.jp/anime/k-on">
+      web de K-on por kyoani
+    </button>
+    <!-- este es un gif que sale al acercar el puntero al logo de k-on! -->
+        <div class="logo-container">
+            <img src="/visual_elements/logouwu.png" alt="K-ON Logo" id="kon-logo">
+            <img src="https://media1.tenor.com/m/GHSF-v48hVwAAAAC/anime-found.gif" alt="Yui Hirasawa" id="yui-img">
+        </div>
+    </header>
+
+    <!--parte de los caps, funcionan desde drive, asi no depende de una nube y tengo un backup de los caps en otra cuenta si tumban los links-->
+    <main>
+    <h2>Episodios</h2>
+    <!-- la clase grid engloba todo el view de los caps-->
+     <!-- si vez dos <div> tipo
+                <div> </div> es por que no conseguia ajustar los elementos xd, no se mucho de desarrollo web, solo lenguajes para desarollo de videojuegos xd-->
+    <div class="episodes-grid">
+        
+        <div class="episode-card">
+            <img src="/ura-on/previewcap/precap1uraon.png" alt="Ep 1">
+            <h3>Ep. 1 - ¡las curiodidades de yui!</h3>
+            <p>Yui se cuestiona las caracteristicas de cada integrante del grupo.</p>
+            <div class="buttons">
+                <button onclick="openModal('https://www.yourupload.com/embed/GBTFd3w4xXt7')">Ver</button>
+                
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\2cap.png" alt="Ep 2">
+            <h3>no disponible! </h3>
+            <p>none!</p>
+            <div class="buttons">
+                <button onclick="openModal('')">Ver</button>
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+        </div> <div class="episode-card">
+            <img src="cap_preview\3cap.png" alt="Ep 3">
+            <h3>Ep. 3 - no disponible!</h3>
+            <p>none!</p>
+            <div class="buttons">
+                <button onclick="openModal('')">Ver</button>
+                <button onclick="downloadEpisode('')">Descargar</button>
+            </div>
+       
+    
+     </main>
+            <div id="proxCAP"><h3>gracias por visitarnos keioner</h3></div>
+   
+    <footer>
+        <p>Hecho por izumiDev27 💻🎸, sin fines de lucro, | 軽音部、永遠に！, comunity web for otakus of k-on! in spanish <b>esta web no pretende remplazar plataformas oficiales, si no existir mientras
+            no haya una alternativa accesible en español
+        </b></p>
+    </footer>
+
+   
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- es un easter egg al darle click al logo de k_on!-->
+    <div id="yui-fullscreen">
+        <img src="img\keioncitas=v2.gif" alt="Yui Hirasawa">
+        <p>¡Has encontrado a las koncitas! 🎶</p>
+    </div>
+
+    <script src="script_view.js"></script>
+    <!-- Vercel Speed Insights -->
+    <script defer src="https://cdn.vercel-analytics.com/v1/speed-insights/script.js"></script>
+</body>
+</html>
