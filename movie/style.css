@@ -92,3 +92,8 @@ body {
         height: auto;
     }
 }
+/*disqus fix*/
+#disqus_thread {
+  width: 100%;
+  margin-top: 20px;
+}
