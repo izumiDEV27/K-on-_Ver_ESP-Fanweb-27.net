@@ -75,3 +75,39 @@ function moverCarrusel(direccion) {
         behavior: 'smooth' 
     });
 }
+//mahou no modo, kore wa centa no data
+document.addEventListener('DOMContentLoaded', () => {
+    const contenedor = document.getElementById('contenedor-principal');
+
+    // Función para cargar el JSON
+    fetch('ChuushinGlobal.json')
+        .then(response => response.json())
+        .then(data => {
+            renderizarTarjetas(data.secciones);
+        })
+        .catch(error => console.error('Error cargando el contenido:', error));
+
+    function renderizarTarjetas(items) {
+        items.forEach(item => {
+            // Creamos la estructura de la tarjeta que ya tienes en tu CSS
+            const card = document.createElement('a');
+            card.href = item.link;
+            card.className = 'card';
+
+            // Generamos los tags si existen
+            const tagsHTML = item.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+            card.innerHTML = `
+                <img src="${item.imagen}" alt="Portada ${item.titulo}">
+                <div class="card-content">
+                    <h3>${item.titulo}</h3>
+                    <div class="tags-container">
+                        ${tagsHTML}
+                    </div>
+                </div>
+            `;
+            
+            contenedor.appendChild(card);
+        });
+    }
+});

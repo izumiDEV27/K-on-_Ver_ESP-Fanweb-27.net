@@ -1,0 +1,47 @@
+{
+  "secciones": [
+    {
+      "id": 1,
+      "titulo": "K-on! (Temporada 1)",
+      "imagen": "/visual_elements/temp1.webp",
+      "link": "temporada1/index.html",
+      "tags": []
+    },
+    {
+      "id": 2,
+      "titulo": "K-on! Temporada 2",
+      "imagen": "/visual_elements/temp2.webp",
+      "link": "t3mp0rada2/t3mporada2.html",
+      "tags": ["2/25 caps disponibles"]
+    },
+    { "id":3,
+      "titulo":"Ura-ON!",
+      "imagen":"/visual_elements/ura ON!.webp",
+      "link":"/ura-on/Ura0n.html",
+      "tags":["1 cap disponible"]
+    },
+    {
+     "id": 4,
+     "titulo":"pelicula HD",
+     "imagen":"/visual_elements/peli_on_.webp",
+     "link":"/movie/peli.html",
+     "tags":["deja tu huella en los comentarios"]
+    },
+    {
+      "id": 5,
+      "titulo": "Descargar musica en FLAC",
+      "imagen": "/visual_elements/music/portadaM.png",
+      "link": "music/k-onMusic.html",
+      "tags": ["en FLAC formato ZIP"]
+    },
+    {
+     "id": 6,
+     "titulo":"WikiFan",
+     "imagen":"/visual_elements/wiki-fan.webp",
+     "link":"https://k-on-wiki.netlify.app/",
+     "tags":["gracias a javierL-DEV"]
+
+    }
+    
+  ]
+}

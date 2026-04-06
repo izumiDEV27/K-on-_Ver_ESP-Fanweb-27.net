@@ -1,0 +1,70 @@
+/* 📚 Sección general */
+.manga-section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🧱 Grid de tomos */
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+/* 📘 Tarjeta */
+.manga-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.manga-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🖼️ Portada */
+.manga-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 🪟 Modal */
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+/* 📄 Contenido del modal */
+.modal-content {
+    position: relative;
+    margin: auto;
+    top: 5%;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* ❌ Botón cerrar */
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+/* 🎮 Controles */
+.controles {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
