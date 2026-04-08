@@ -5,20 +5,20 @@
       "titulo": "K-on! Temporada 1",
       "imagen": "/visual_elements/temp1.webp",
       "link": "temporada1/index.html",
-      "tags": []
+      "tags": ["1080p"]
     },
     {
       "id": 2,
       "titulo": "K-on! Temporada 2",
       "imagen": "/visual_elements/temp2.webp",
       "link": "t3mp0rada2/t3mporada2.html",
-      "tags": ["2/25 caps disponibles"]
+      "tags": ["2/27 caps disponibles"]
     },
     { "id":3,
       "titulo":"Ura-ON!",
       "imagen":"/visual_elements/ura ON!.webp",
       "link":"/ura-on/Ura0n.html",
-      "tags":["1 cap disponible"]
+      "tags":["4 cap disponibles"]
     },
     {
      "id": 4,
