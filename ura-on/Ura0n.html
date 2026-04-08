@@ -8,11 +8,7 @@
      <script src="/ura-on/ura-0n.js"></script>
     <link rel="stylesheet" href="/ura-on/Ura0n.css">
     <link rel="icon" href="/visual_elements/favicon-uraon.png">
-</head>
 
-
-  </style>
-</head>
 <body>
 <img src="/visual_elements/k-on-anime.gif" class="gif-left">
   <!-- esta parte es un aviso emergente donde hay dos botones que hacen diferentes cosas-->
@@ -21,6 +17,7 @@
       <p>
         aun en desarollo<br> recuerda compartir la web 
         <span>🗿las <b>keioncitas</b> son eternas🗿</span>
+        <br> se recomienda bloqueador de anuncios por culpa de <br> yourupload
       </p>
       <button id="continueBtn">Continuar</button>
       <button id="thanksBtn">Gracias</button>
@@ -81,40 +78,11 @@
 
     <!--parte de los caps, funcionan desde drive, asi no depende de una nube y tengo un backup de los caps en otra cuenta si tumban los links-->
     <main>
-    <h2>Episodios</h2>
-    <!-- la clase grid engloba todo el view de los caps-->
-     <!-- si vez dos <div> tipo
-                <div> </div> es por que no conseguia ajustar los elementos xd, no se mucho de desarrollo web, solo lenguajes para desarollo de videojuegos xd-->
-    <div class="episodes-grid">
-        
-        <div class="episode-card">
-            <img src="/ura-on/previewcap/precap1uraon.png" alt="Ep 1">
-            <h3>Ep. 1 - ¡las curiodidades de yui!</h3>
-            <p>Yui se cuestiona las caracteristicas de cada integrante del grupo.</p>
-            <div class="buttons">
-                <button onclick="openModal('https://www.yourupload.com/embed/GBTFd3w4xXt7')">Ver</button>
-                
-                <button onclick="downloadEpisode('https://www.mediafire.com/file/pl6ykwt3unjnez3/K-On%2521_Ura-On%2521_-_01-ByIzumiFanSUB.mp4/file')">Descargar</button>
-            </div>
-        </div> <div class="episode-card">
-            <img src="cap_preview\2cap.png" alt="Ep 2">
-            <h3>no disponible! </h3>
-            <p>none!</p>
-            <div class="buttons">
-                <button onclick="openModal('')">Ver</button>
-                <button onclick="downloadEpisode('')">Descargar</button>
-            </div>
-        </div> <div class="episode-card">
-            <img src="cap_preview\3cap.png" alt="Ep 3">
-            <h3>Ep. 3 - no disponible!</h3>
-            <p>none!</p>
-            <div class="buttons">
-                <button onclick="openModal('')">Ver</button>
-                <button onclick="downloadEpisode('')">Descargar</button>
-            </div>
-       
-    
-     </main>
+    <h2>Episodios</h2> 
+
+    <div class="episodes-grid" id="episodes-container">
+        </div>
+</main>
             <div id="proxCAP"><h3>gracias por visitarnos keioner</h3></div>
    
     <footer class="footer">

@@ -73,3 +73,35 @@ function downloadEpisode(url) {
 function openEpisode(url) {
     window.open(url, "_blank");
 }
+
+//scuripto ura
+async function cargarEpisodios() {
+    const container = document.getElementById('episodes-container');
+    
+    try {
+        // Cambia 'episodios.json' por la ruta real de tu archivo
+        const response = await fetch('/ura-on/ura_chuushin.json');
+        const episodios = await response.json();
+
+        episodios.forEach(ep => {
+            const card = document.createElement('div');
+            card.className = 'episode-card'; // Mantiene tus estilos de CSS
+
+            card.innerHTML = `
+                <img src="${ep.imagen}" alt="Ep ${ep.id}">
+                <h3>${ep.titulo}</h3>
+                <p>${ep.descripcion}</p>
+                <div class="buttons">
+                    <button onclick="openModal('${ep.urlVer}')">Ver</button>
+                    <button onclick="downloadEpisode('${ep.urlDescarga}')">Descargar</button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        console.error("Error al cargar los episodios:", error);
+    }
+}
+
+// Llama a la función cuando cargue el DOM
+document.addEventListener("DOMContentLoaded", cargarEpisodios);
