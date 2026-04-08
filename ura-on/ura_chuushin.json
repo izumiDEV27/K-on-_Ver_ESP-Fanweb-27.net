@@ -2,17 +2,26 @@
   {
     "id": 1,
     "titulo": "Ep. 1 a 3 ¡las curiodidades de yui!",
-    "descripcion": "A yui le da curiosidad el aspecto de tsumugi y mio.",
+    "descripcion": "A yui le da curiosidad el aspecto de tsumugi, mio y ritsu.",
     "imagen": "/ura-on/previewcap/precap1uraon.png",
     "urlVer": "https://www.yourupload.com/embed/GBTFd3w4xXt7",
     "urlDescarga": "https://www.mediafire.com/file/pl6ykwt3unjnez3/K-On%2521_Ura-On%2521_-_01-ByIzumiFanSUB.mp4/file"
   },
   {
     "id": 2,
-    "titulo": "no disponible!",
-    "descripcion": "none!",
-    "imagen": "cap_preview/2cap.png",
-    "urlVer": "",
+    "titulo": "momentos fotograficos ritsu!",
+    "descripcion": "ritsu toma fotografias a cada integrante del club",
+    "imagen": "/ura-on/previewcap/cap2.webp",
+    "urlVer": "https://www.yourupload.com/embed/q84djtm2MwuY",
+    "urlDescarga": "https://www.mediafire.com/file/92b4gjru9om3pfu/K-On%2521_Ura-On%2521_-_02_IzumiFanSUB.mp4/file"
+  },
+  {
+    "id": 3,
+    "titulo": "none!",
+    "descripcion":"",
+    "imagen": "",
+    "urlVer":"",
     "urlDescarga": ""
+
   }
 ]
