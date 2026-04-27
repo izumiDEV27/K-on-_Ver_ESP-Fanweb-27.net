@@ -189,95 +189,7 @@ body {
         gap: 30px;
     }
 }
-.card img, .manga img { /* <- Se añade .manga img */
-    width: 100%;
-    height: 300px; /* est0 aumenta ligeramente la altura de la imagen */
-    object-fit: cover;
-    border-bottom: 3px solid #ffb6c1; /* Borde inferior para separar visualmente */
-}
 
-/* Contenedor de los botones */
-.manga .buttons {
-    /* Usamos flexbox para alinear los botones horizontalmente */
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espacio entre los botones */
-    padding: 15px 0 15px 0; /* Espacio interior arriba y abajo */
-}
-
-/* Estilo general del botón */
-.manga button {
-    /* Colores y forma inspirados en los botones de la vista de episodios */
-    background-color: #ffb6c1; /* Rosa claro */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    color: #333;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9rem;
-    
-    /* Animación para transiciones suaves */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Efecto al pasar el ratón (Hover) */
-.manga button:hover {
-    background-color: #ff89a5; /* Rosa más oscuro */
-    transform: scale(1.05); /* Ligeramente más grande */
-}
-
-/* Estilos para asegurar que el contenido de la tarjeta manga se vea bien xd*/
-/* Aseguramos que el contenido esté centrado como las demás tarjetas */
-.manga .card-content {
-    padding: 15px 10px; 
-    text-align: center;
-}
-
-.card img, .wiki img { /* <- Se añade .manga img */
-    width: 100%;
-    height: 300px; /* est0 aumenta ligeramente la altura de la imagen */
-    object-fit: cover;
-    border-bottom: 3px solid #ffb6c1; /* Borde inferior para separar visualmente */
-}
-
-/* Contenedor de los botones */
-.wiki .buttons {
-    /* Usamos flexbox para alinear los botones horizontalmente */
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espacio entre los botones */
-    padding: 15px 0 15px 0; /* Espacio interior arriba y abajo */
-}
-
-/* Estilo general del botón */
-.wiki button {
-    /* Colores y forma inspirados en los botones de la vista de episodios */
-    background-color: #ffb6c1; /* Rosa claro */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    color: #333;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 0.9rem;
-    
-    /* Animación para transiciones suaves */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Efecto al pasar el ratón (Hover) */
-.wiki button:hover {
-    background-color: #ff89a5; /* Rosa más oscuro */
-    transform: scale(1.05); /* Ligeramente más grande */
-}
-
-/* Estilos para asegurar que el contenido de la tarjeta manga se vea bien xd*/
-/* Aseguramos que el contenido esté centrado como las demás tarjetas */
-.wiki .card-content {
-    padding: 15px 10px; 
-    text-align: center;
-}
 /*parte de mensaje emergente de proceso de desarrollo e implemetación*/
  #popupOverlay {
             position: fixed;
@@ -337,14 +249,8 @@ body {
         
         }
 
-footer {
-  
-  background: rgba(0, 0, 0, 0.288); /* Un poco más oscuro para legibilidad */
-  color: rgb(227, 147, 230);
-  text-align: center;
-  border-radius: 8px; /* <- esta parte la quito si quiero que se vea como barra completa de lado a lado */
-  margin-top: auto; /* Asegura doblemente que se vaya al fondo */
-}
+
+
 .personaje-flotante {
     position: fixed; /* Flota sobre el contenido */
     width: 150px;    /* Ajusta el tamaño a tu gusto */
@@ -455,7 +361,7 @@ footer {
 }
 
 .footer-links a {
-  color: #ccc;
+  color: #e4b8d9;
   text-decoration: none;
   margin: 0 10px;
   position: relative;
@@ -469,12 +375,12 @@ footer {
   height: 1px;
   left: 0;
   bottom: -2px;
-  background: #ffcc00;
+  background: #ff00ff;
   transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: rgb(157, 252, 196);
 }
 
 .footer-links a:hover::after {
