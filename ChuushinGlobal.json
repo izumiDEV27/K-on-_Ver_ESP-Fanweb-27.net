@@ -35,7 +35,15 @@
       "tags": ["en FLAC formato ZIP"]
     },
     {
-      "id": 6,
+      "id":6,
+      "titulo":"Conciertos y eventos en vivo",
+      "imagen":"visual_elements/concierto.gif",
+      "link":"",
+      "tags":["aun no disponible"]
+
+    },
+    {
+      "id": 7,
       "titulo": "decargar juego PSP Y PS3",
       "imagen": "/visual_elements/pspYps3.png",
       "link": "",
@@ -43,21 +51,21 @@
 
     },
     {
-    "id": 7,
+    "id": 8,
     "titulo": "manga 漫画",
     "imagen": "/visual_elements/manga.jpg",
     "link":"",
     "tags":["en desarrollo, no disponible"]
     },
     {
-     "id": 8,
+     "id": 9,
      "titulo":"WikiFan",
      "imagen":"/visual_elements/wiki-fan.webp",
      "link":"https://k-on-wiki.netlify.app/",
      "tags":["gracias a javierL-DEV"]
     },
     {
-      "id": 9,
+      "id": 10,
       "titulo": "modelos 3D mmd-pmd-blender",
       "imagen": "/visual_elements/modelos 3D.png",
       "link": "",
