@@ -1,70 +1,30 @@
-/* 📚 Sección general */
-.manga-section {
-    padding: 20px;
-    text-align: center;
+/* From Uiverse.io by necatimertmetin */ 
+.z {
+  position: absolute;
+  align-items: center;
+  font-size: 32px;
+  opacity: 0;
+  
 }
-
-/* 🧱 Grid de tomos */
-.manga-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+.z-1 {
+  animation: swayUpToRight 2s ease-out infinite;
 }
-
-/* 📘 Tarjeta */
-.manga-card {
-    cursor: pointer;
-    transition: transform 0.2s;
+.z-2 {
+  animation: swayUpToRight 2s ease-out 0.5s infinite;
 }
-
-.manga-card:hover {
-    transform: scale(1.05);
+.z-3 {
+  animation: swayUpToRight 2s ease-out 1s infinite;
 }
-
-/* 🖼️ Portada */
-.manga-card img {
-    width: 100%;
-    border-radius: 10px;
+.z-4 {
+  animation: swayUpToRight 2s ease-out 1.5s infinite;
 }
-
-/* 🪟 Modal */
-.modal {
-    display: none; /* oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-}
-
-/* 📄 Contenido del modal */
-.modal-content {
-    position: relative;
-    margin: auto;
-    top: 5%;
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-}
-
-/* ❌ Botón cerrar */
-.cerrar {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 25px;
-    cursor: pointer;
-    color: white;
-}
-
-/* 🎮 Controles */
-.controles {
-    margin-top: 10px;
-}
-
-button {
-    padding: 8px 15px;
-    margin: 5px;
-    cursor: pointer;
+@keyframes swayUpToRight {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(80px, -100px) rotate(30deg);
+    opacity: 0;
+  }
 }

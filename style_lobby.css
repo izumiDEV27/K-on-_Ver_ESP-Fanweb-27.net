@@ -43,8 +43,14 @@ body {
     padding: 20px;         /* Ajuste simple */
     border-radius: 10px; /* Estético: solo bordes inferiores redondeados si toca arriba */
     margin-top: 30px;      /* Para separar del techo si quieres */
+    transition: transform 0.3s ease;
 }
+.header-logo {transition: transform 0.3s ease;
 
+}
+.header-logo:hover {
+    transform: scale(1.2);
+}
 .main-header h5 {
     color: #ffb6c1; /* Color suave de K-ON! */
     font-size: 1.2rem;
@@ -392,3 +398,4 @@ body {
   margin-top: 10px;
   color: #666;
 }
+

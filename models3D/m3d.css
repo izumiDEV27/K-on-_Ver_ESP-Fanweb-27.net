@@ -1,0 +1,133 @@
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px 20px;
+    margin: 20px;
+
+    border-radius: 20px;
+
+    /* fondo tipo glass */
+    background: rgba(233, 52, 218, 0.24);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    color: #dd18c3;
+}
+
+/* Logo */
+.header-logo {
+    width: 400px;
+    max-width: 80%;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Título */
+.titulo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, #e60606, #206de7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portada {
+    border-radius: 3%;
+    transition: transform 0.3s ease;
+}
+.portada:hover {
+    transform: scale(1.05);
+}
+/* Subtítulo */
+.subtitulo {
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+
+    color: rgba(255, 9, 9, 0.8);
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* Espacio entre las imágenes antes de apilarse */
+  padding: 10vh 0;
+}
+
+.gallery-item {
+  position: sticky;
+  top: 10vh; /* A qué distancia del borde superior se "detiene" la imagen */
+  width: 80%;
+  max-width: 600px;
+  height: 720px;
+  transition: transform 0.3s ease;
+  /* Esto ayuda a que se vea el efecto de apilado */
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.descripcion1 {
+    align-items: center;
+    text-align: center;
+    font-size: 145%;
+    background: linear-gradient(90deg, #e60606, #206de7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc-antes-caracterisicas{
+font-size: 100%;
+align-items: center;
+color: #ffffff;
+background-color: #3770ec;
+border-radius: 2%;
+background-size: 10%;
+}
+
+.caracteristicas {
+
+    font-size: 100%;
+    background: linear-gradient(90deg, #e60606, #206de7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.download-btn {
+    
+}
+@supports (animation-timeline: view()) {
+  .gallery-item {
+    view-timeline-name: --item;
+    view-timeline-axis: block;
+    animation-timeline: --item;
+    animation-name: stack;
+    animation-fill-mode: both;
+    animation-range: entry 100% exit 100%;
+  }
+
+  @keyframes stack {
+    to {
+      transform: scale(0.9); 
+      filter: brightness(0.7); /* Se oscurece ligeramente */
+    }
+  }
+}

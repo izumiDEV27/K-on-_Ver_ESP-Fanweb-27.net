@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="/models3D/m3d.css">
+
+<header class="main-header"> 
+    <img src="/visual_elements/baneer1.webp" alt="Logo K-ON!" class="header-logo">
+    
+    <h2 class="titulo">Modelos 3D</h2>
+    
+    <p class="subtitulo">
+        Hola estos modelos son sacados del juego de PSP por medio de hooks de la comunidad <br>
+        se pueden usan en MMD (miku miku dance) y en blender con un addon de MMD
+    </p>
+    <img class="portada" src="/visual_elements/modelos 3D.png" alt="Preview del modelo">
+</header>
+  <h3 class="descripcion1">Imagenes de los modelos <br>(vista en Blender con addon MMD)</h3>
+  <div class="gallery">
+  <div class="gallery-item">
+    <img src="/models3D/img-models3d/yui3d.webp" alt="Descripción 1">
+  </div>
+  <div class="gallery-item">
+    <img src="/models3D/img-models3d/mio3d.webp" alt="Descripción 2">
+  </div>
+  <div class="gallery-item">
+    <img src="/models3D/img-models3d/ritsu3d.webp" alt="Descripción 3">
+  </div>
+    <div class="gallery-item">
+    <img src="/models3D/img-models3d/tsumugi3d.webp" alt="Descripción 4">
+  </div>
+    <div class="gallery-item">
+    <img src="/models3D/img-models3d/azunya3d.webp" alt="Descripción 5">
+  </div>
+  </div>
+  <p class="desc-antes-caracterisicas">
+    Modelo 3D estilo anime optimizado para animación en Blender.
+  </p>
+
+  <ul class="caracteristicas">
+    <li>Formato: .blend / .PMD/ .MMD</li>
+    <li>Peso: menos de 12MB</li>
+    <li>Polígonos: 45k aprox</li>
+    <li>Texturas: ni idea la calidad xd</li>
+    <li>Rig: Sí</li>
+  </ul>
+
+  <!--parte de des-ca-rga-->
+  <button class="download-btn" data-file="https://www.mediafire.com/file/f7r358k6enub6xm/K_on_modelos_3D_%2528._blender%2529-20260506T073413Z-3-001.zip/file">Blender</button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/g5zqw9mu0syv4c4/K_on_modelos_%2528MMD%2529_incompleto-20260506T073433Z-3-001.zip/file">PMD</button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/1ymj70b162ir4e8/K-on%2521_PMD-20260506T073351Z-3-001.zip/file">PMD opcion 2</button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/6jv1jjx7dewhjzd/miku_miku_dance_windows-20260506T073401Z-3-001.zip/file">Descarga miku miku dance windows</button>
+
+
+
+<script>
+let selectedFile = "";
+
+document.querySelectorAll(".download-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    selectedFile = btn.dataset.file;
+    document.getElementById("modal").style.display = "block";
+  });
+});
+
+function downloadFile() {
+  window.location.href = selectedFile;
+}
+</script>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Antes de descargar</h2>
+    <p>
+      Este modelo es gratuito para uso personal.  
+      No redistribuir ni vender.  
+      Da créditos si lo usas en proyectos públicos.
+    </p>
+    <button onclick="downloadFile()">Entendido | descargar</button>
+  </div>
+</div>
+
+<p class="descripcionDEV">
+            LÉEME POR FAVOR
+<br>
+Hola, gracias por descargar estos archivos.
+<br>
+[✓] Estos modelos están RIGGEADOS.<br>
+    >> ¿Qué es el riggeo? <br>
+    Los modelos 3D tienen "huesos" (rigging), lo que permite
+    mover brazos, piernas, cabeza, etc.<br>
+[✓] Formato principal: .PMD (para usar en MMD - MikuMikuDance)<br>
+[✓] También se pueden usar en otros programas como ChatVR<br>
+    o para modelos VTuber 3D, aunque requieren conocimientos extra. <br>
+<br>
+NOTA IMPORTANTE:  
+Estos modelos están en un FORMATO ANTIGUO, por lo que puede ser
+difícil encontrar software que los abra sin problemas.
+<br>
+◆ Origen de los modelos:<br>
+Extraídos del juego de PSP:<br>
+"K-ON! Houkago Live!!"<br>
+◆ En cada carpeta encontrarás enlaces a las webs originales
+de donde saqué los modelos (la mayoría ya no funcionan).  
+<br>
+[ ACTUALIZACIÓN | 01-10-2025 ] <br>
+Estoy trabajando en convertir los modelos a formato BLENDER (.BLEND).  
+Actualmente los huesos no aparecen correctamente, así que sigo
+ajustando detalles.  
+Pronto actualizaré esta nota con nuevos enlaces.  
+<br>
+Eso es todo. <br> 
+<h3>lAS KEONCITAS son eternas ♪♫<br>
+(シ_ _)シ ありがとう~</h3> 
+</p>
+
+
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #111;
+  color: white;
+  padding: 20px;
+  margin: 15% auto;
+  width: 300px;
+  border-radius: 12px;
+  text-align: center;
+}
+</style>
+
