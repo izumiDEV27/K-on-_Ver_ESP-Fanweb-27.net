@@ -1,5 +1,21 @@
-<link rel="stylesheet" href="/models3D/m3d.css">
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos3D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/visual_elements/yui-con-web-principal.png">
+    <link rel="stylesheet" href="/models3D/m3d.css">
+     <meta name="description" content="Modelos 3d de las keioncitas">
+    <meta name="keywords" content="K-ON models, modelos 3d k-on!">
+    <meta name="author" content="izumi Dev">
+    <meta name="robots" content="index, follow">
+</head>
+<body>
+    
+</body>
+</html>
 <header class="main-header"> 
     <img src="/visual_elements/baneer1.webp" alt="Logo K-ON!" class="header-logo">
     
@@ -42,17 +58,30 @@
   </ul>
 
   <!--parte de des-ca-rga-->
-  <button class="download-btn" data-file="https://www.mediafire.com/file/f7r358k6enub6xm/K_on_modelos_3D_%2528._blender%2529-20260506T073413Z-3-001.zip/file">Blender</button>
-  <button class="download-btn" data-file="https://www.mediafire.com/file/g5zqw9mu0syv4c4/K_on_modelos_%2528MMD%2529_incompleto-20260506T073433Z-3-001.zip/file">PMD</button>
-  <button class="download-btn" data-file="https://www.mediafire.com/file/1ymj70b162ir4e8/K-on%2521_PMD-20260506T073351Z-3-001.zip/file">PMD opcion 2</button>
-  <button class="download-btn" data-file="https://www.mediafire.com/file/6jv1jjx7dewhjzd/miku_miku_dance_windows-20260506T073401Z-3-001.zip/file">Descarga miku miku dance windows</button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/f7r358k6enub6xm/K_on_modelos_3D_%2528._blender%2529-20260506T073413Z-3-001.zip/file"><span>Blender</span></button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/g5zqw9mu0syv4c4/K_on_modelos_%2528MMD%2529_incompleto-20260506T073433Z-3-001.zip/file"><span>PMD</span></button>
+  <button class="download-btn" data-file="https://www.mediafire.com/file/1ymj70b162ir4e8/K-on%2521_PMD-20260506T073351Z-3-001.zip/file"><span>PMD opcion 2</span></button>
+  <!-- mmd windows boton-->
+<button class="downloadw-btn" data-file="https://www.mediafire.com/file/6jv1jjx7dewhjzd/miku_miku_dance_windows-20260506T073401Z-3-001.zip/file">
+  <div class="ms-logo">
+    <div class="ms-logo-square"></div>
+    <div class="ms-logo-square"></div>
+    <div class="ms-logo-square"></div>
+    <div class="ms-logo-square"></div>
+  </div>
+  <div class="button-text">
+    <span>descarga Miku Miku Dance para</span>
+    <span>windows</span>
+  </div>
+</button>
+
 
 
 
 <script>
 let selectedFile = "";
 
-document.querySelectorAll(".download-btn").forEach(btn => {
+document.querySelectorAll(".download-btn", "downloadw-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     selectedFile = btn.dataset.file;
     document.getElementById("modal").style.display = "block";
