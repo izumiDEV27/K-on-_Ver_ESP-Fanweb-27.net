@@ -75,24 +75,6 @@
   </div>
 </button>
 
-
-
-
-<script>
-let selectedFile = "";
-
-document.querySelectorAll(".download-btn", "downloadw-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    selectedFile = btn.dataset.file;
-    document.getElementById("modal").style.display = "block";
-  });
-});
-
-function downloadFile() {
-  window.location.href = selectedFile;
-}
-</script>
-
 <div id="modal" class="modal">
   <div class="modal-content">
     <h2>Antes de descargar</h2>
@@ -160,4 +142,4 @@ Eso es todo. <br>
   text-align: center;
 }
 </style>
-
+<script src="/models3D/m3d.js"></script>

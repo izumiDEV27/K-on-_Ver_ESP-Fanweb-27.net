@@ -54,7 +54,7 @@
     "id": 8,
     "titulo": "manga 漫画",
     "imagen": "/visual_elements/manga.jpg",
-    "link":"",
+    "link":"/manga/manga.html",
     "tags":["en desarrollo, no disponible"]
     },
     {

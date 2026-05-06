@@ -116,8 +116,8 @@ background-size: 10%;
  display: inline-block;
  border-radius: 7px;
  border: none;
- background: #1875FF;
- color: white;
+ background: #ce3535;
+ color: rgb(247, 248, 248);
  font-family: inherit;
  text-align: center;
  font-size: 13px;
@@ -145,7 +145,7 @@ background-size: 10%;
 }
 
 .download-btn:hover span {
- padding-right: 6.20em;
+ padding-right: 5.20em;
 }
 
 .download-btn:hover span:after {
