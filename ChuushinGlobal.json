@@ -38,7 +38,7 @@
       "id":6,
       "titulo":"Conciertos y eventos en vivo",
       "imagen":"visual_elements/concierto.gif",
-      "link":"",
+      "link":"concerts/concert.html",
       "tags":["aun no disponible"]
 
     },

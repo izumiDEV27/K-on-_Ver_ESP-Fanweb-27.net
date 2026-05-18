@@ -215,15 +215,13 @@ body {
             background-color: #00000060; /* vibra cute rosa */
             border: 2px solid #69aaffbd;
             border-radius: 15px;
-            padding: 30px 20px;
-            width: 60%;
-            max-width: 400px;
+            width: 55%;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             font-family: 'Arial', sans-serif;
             display: flex;
-    flex-direction: column;
-    align-items: center;   /* centra horizontal */
+            flex-direction: column;
+            align-items: center;   /* centra horizontal */
     /*parte temp*/
     
         }
@@ -350,7 +348,7 @@ body {
 /*footer a mi gusto*/
 .footer {
   margin-top: 60px;
-  padding: 25px 15px;
+  padding: 25px 0px;
   text-align: center;
   background: #1a1a22;
   border-top: 1px solid #333;
@@ -399,3 +397,61 @@ body {
   color: #666;
 }
 
+/*sobre mi */ 
+.cardgit {
+  width: 15em;
+  height: 20.9em;
+  background: #202024;
+  transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+}
+
+.cardgit span {
+  font-weight: bold;
+  color: rgb(213, 17, 239);
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.cardgit .info {
+  font-weight: 400;
+  color: rgb(19, 222, 240);
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cardgit .img {
+  scale: inherit;
+  border-radius: 5%;
+  margin: auto;
+  width: 140px;
+  height: auto;
+}
+
+/* anmacion de fecha*/
+.fecha {
+  color: rgb(223, 52, 203);
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+}
+.letter {
+  animation: letter 1s ease-in-out infinite alternate;
+  animation-delay: calc(-1 * var(--i) * 0.2s);
+}
+@keyframes letter {
+  0% {
+    font-weight: 700;
+    font-size: 2em;
+  }
+  100% {
+    font-weight: 100;
+    font-size: 1em;
+  }
+}
