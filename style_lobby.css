@@ -6,6 +6,7 @@
 .subtitulo {
     color: #fffdfd;
     font-size: 200%;
+    font-family: cursive;
 }
 
 
@@ -212,13 +213,13 @@ body {
 
         /* Caja del pop-up */
         #popup {
-            background-color: #00000060; /* vibra cute rosa */
-            border: 2px solid #69aaffbd;
+            background-color: #00000060;
+            border: 2px solid #de01fc;
             border-radius: 15px;
             width: 55%;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            font-family: 'Arial', sans-serif;
+            font-family: cursive;
             display: flex;
             flex-direction: column;
             align-items: center;   /* centra horizontal */
@@ -243,13 +244,13 @@ body {
         
 
         #popup button:hover {
-            background-color: #ff85c1;
+            background-color: #f70606;
         }
         /*parte del mensaje de enmedio*/
         .mensaje-emergente {
         font-size: 80%;
         color: #fffdfd;
-        font-family: sans-josefin;
+        font-family: cursive;
         
         }
 
@@ -259,7 +260,7 @@ body {
     position: fixed; /* Flota sobre el contenido */
     width: 150px;    /* Ajusta el tamaño a tu gusto */
     z-index: 9999;   /* Asegura que esté ENCIMA de todo (header, footer, etc.) */
-    
+    opacity: 0.8;
     /* spawnea en la esquina superior izquierda xd*/
     top: 0;
     left: 0;
@@ -345,6 +346,30 @@ body {
     }
 }
 
+
+/* apartado de disquis ajustado xd, esta bien raro*/
+.comunidadtxt {
+    color: #fffdfd;
+    font-size: 175%;
+    text-decoration: solid;
+    text-align: center;
+    background-color: #00000075;
+    border-radius: 5px;
+    font-family: cursive;
+    
+}
+#disqus_thread {
+    max-width: 850px;  
+    width: 100%;       
+    margin: 40px auto 0 auto;  
+    padding: 20px;  
+}
+/*texto de colaboadores*/
+.colab{
+    background-color: #0202025e;
+    border-radius: 10px;
+    font-family: cursive;
+}
 /*footer a mi gusto*/
 .footer {
   margin-top: 60px;
