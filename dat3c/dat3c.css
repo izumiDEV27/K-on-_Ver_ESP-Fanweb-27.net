@@ -1,0 +1,75 @@
+/* El truco maestro para el scroll suave sin librerías */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px; /* Evita que el menú tape el título al saltar */
+}
+p, h2{
+  align-items: center;
+    text-align: center;
+    font-size: 95%;
+    background: linear-gradient(90deg, #e60606, #e020e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  
+}
+body {
+  font-family: sans-serif;
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #a9d9ec;
+}
+
+/* Menú lateral que se queda fijo al hacer scroll (Sticky) */
+.jump-menu {
+  position: sticky;
+  top: 20px;
+  width: 250px;
+  height: fit-content;
+  background: #e69ee2;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #d81616;
+}
+
+.jump-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.jump-menu li {
+  margin-bottom: 12px;
+}
+
+.jump-menu a {
+  text-decoration: none;
+  color: #fcfbfb;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+/* Clase que se activará dinámicamente con JS */
+.jump-menu a.active {
+  color: #ff6b81; /* Color característico tipo K-On! */
+  font-weight: bold;
+}
+
+/* Estilo de las secciones */
+.post-content {
+  flex: 1;
+}
+
+.post-section {
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+}
+
+.post-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 15px 0;
+}

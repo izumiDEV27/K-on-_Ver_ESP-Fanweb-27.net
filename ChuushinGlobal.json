@@ -74,10 +74,10 @@
     
      {
       "id": 11,
-      "titulo": "Datos curiosos",
+      "titulo": "Datos curiosos K-ON!",
       "imagen": "/visual_elements/ap4rtado/datosc.jpg",
-      "link": "/manga/manga.html",
-      "tags":["En desarrllo..."]
+      "link": "dat3c/dat3c.html",
+      "tags":["Beta/incompleto"]
     }
   ]
 }
