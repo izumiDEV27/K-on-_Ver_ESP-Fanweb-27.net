@@ -3,27 +3,27 @@
     {
       "id": 1,
       "titulo": "K-on! Temporada 1",
-      "imagen": "/visual_elements/temp1.webp",
+      "imagen": "/visual_elements/ap4rtado/temp1.webp",
       "link": "temporada1/index.html",
       "tags": ["1080p"]
     },
     {
       "id": 2,
       "titulo": "K-on! Temporada 2",
-      "imagen": "/visual_elements/temp2.webp",
+      "imagen": "/visual_elements/ap4rtado/temp2.webp",
       "link": "t3mp0rada2/t3mporada2.html",
       "tags": ["2/27 caps disponibles"]
     },
     { "id":3,
       "titulo":"Ura-ON!",
-      "imagen":"/visual_elements/ura ON!.webp",
+      "imagen":"/visual_elements/ap4rtado/ura ON!.webp",
       "link":"/ura-on/Ura0n.html",
       "tags":["6 cap disponibles"]
     },
     {
      "id": 4,
      "titulo":"pelicula HD",
-     "imagen":"/visual_elements/peli_on_.webp",
+     "imagen":"/visual_elements/ap4rtado/peli_on_.webp",
      "link":"/movie/peli.html",
      "tags":["deja tu huella en los comentarios"]
     },
@@ -37,7 +37,7 @@
     {
       "id":6,
       "titulo":"Conciertos y eventos en vivo",
-      "imagen":"visual_elements/concierto.gif",
+      "imagen":"visual_elements/ap4rtado/concierto.gif",
       "link":"concerts/concert.html",
       "tags":["aun no disponible"]
 
@@ -45,7 +45,7 @@
     {
       "id": 7,
       "titulo": "decargar juego PSP Y PS3",
-      "imagen": "/visual_elements/pspYps3.png",
+      "imagen": "/visual_elements/ap4rtado/pspYps3.png",
       "link": "",
       "tags":["Aún no disponible"]
 
@@ -53,24 +53,31 @@
     {
     "id": 8,
     "titulo": "manga 漫画",
-    "imagen": "/visual_elements/manga.jpg",
+    "imagen": "/visual_elements/ap4rtado/manga.jpg",
     "link":"/manga/manga.html",
     "tags":["en desarrollo, no disponible"]
     },
     {
      "id": 9,
      "titulo":"WikiFan",
-     "imagen":"/visual_elements/wiki-fan.webp",
+     "imagen":"/visual_elements/ap4rtado/wiki-fan.webp",
      "link":"https://k-on-wiki.netlify.app/",
      "tags":["gracias a javierL-DEV"]
     },
     {
       "id": 10,
-      "titulo": "modelos 3D mmd-pmd-blender",
-      "imagen": "/visual_elements/modelos 3D.png",
+      "titulo": "modelos3D mmd-pmd-blender",
+      "imagen": "/visual_elements/ap4rtado/modelos 3D.png",
       "link": "/models3D/m3d.html",
       "tags":["Disponible..."]
-    }
+    },
     
+     {
+      "id": 11,
+      "titulo": "Datos curiosos",
+      "imagen": "/visual_elements/ap4rtado/datosc.jpg",
+      "link": "/manga/manga.html",
+      "tags":["En desarrllo..."]
+    }
   ]
 }

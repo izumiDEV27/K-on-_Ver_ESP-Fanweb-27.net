@@ -67,7 +67,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1250px;
     
     /* CAMBIOS CLAVE AQUÍ: */
     flex: 1;                /* Esto hace que este div crezca y empuje el footer hacia abajo */
@@ -88,21 +88,10 @@ body {
     /* Añadir una sombra sutil para profundidad */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
-.manga {
-    width: 200px; /* Aumentar ligeramente el ancho para un mejor visual */
-    background: #252544;
-    border-radius: 12px; /* Ligeramente más redondeado */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición para sombra */
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    /* Añadir una sombra sutil para profundidad */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 
-}
 
-.card:hover, .manga:hover { /* <- Se añade .manga:hover */
+
+.card:hover { /* <- Se añade .manga:hover */
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
@@ -223,10 +212,11 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;   /* centra horizontal */
+        
     /*parte temp*/
     
         }
-
+ 
         /* Botón de cerrar */
         #popup button {
             background-color: #0695e7;
