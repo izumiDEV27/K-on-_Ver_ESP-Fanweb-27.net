@@ -4,15 +4,15 @@
    ================================
 */
 .subtitulo {
-    color: #fffdfd;
+    color: #faf8f8;
     font-size: 200%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
 
 body {
     font-family: "Poppins", sans-serif;
-    color: rgb(27, 228, 228);
     margin: 0;
     
     /* CAMBIOS CLAVE AQUÍ: */
@@ -50,7 +50,7 @@ body {
 
 }
 .header-logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 .main-header h5 {
     color: #ffb6c1; /* Color suave de K-ON! */
@@ -110,8 +110,8 @@ body {
 
 .card-content h3 {
     margin: 0 0 10px 0;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 /* Estilos mejorados para las etiquetas (tags) */
@@ -121,7 +121,7 @@ body {
 
 .tag {
     /* Usar un color más distintivo y de la paleta */
-    background: #ff69b4; /* Rosa/Fucsia */
+    background: #f80505; /* Rosa/Fucsia */
     color: #fff;
     padding: 4px 10px;
     border-radius: 20px; /* Estilo píldora */
@@ -145,7 +145,7 @@ body {
 */
 @media (max-width: 960px) {
     .contenedor {
-        gap: 20px; /* Reducir el espacio entre tarjetas */
+        gap: 15px; /* Reducir el espacio entre tarjetas */
     }
     
     .card {
@@ -175,7 +175,8 @@ body {
     }
     
     .card img {
-        height: 200px; /* Reducir altura para ahorrar espacio vertical */
+        height: 450px; /* Reducir altura para ahorrar espacio vertical */
+        width: 300px;
     }
     
     .contenedor {
@@ -198,8 +199,31 @@ body {
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            color: #f00808;
+            /* pate de outline*/
+             
+    
         }
-
+.anunD {  
+    color: #fa0303;
+    text-align: center;
+     text-shadow: 
+    -1px -1px 0px white,  
+     1px -1px 0px white,  
+    -1px  1px 0px white,  
+     1px  1px 0px white;
+ 
+}
+.fechaUP{
+    font-size: 1.18rem;
+    color: #f00808;
+    font-family: monospace;
+    text-shadow: 
+    -1px -1px 0px white,  
+     1px -1px 0px white,  
+    -1px  1px 0px white,  
+     1px  1px 0px white;
+}
         /* Caja del pop-up */
         #popup {
             background-color: #00000060;
@@ -213,10 +237,10 @@ body {
             flex-direction: column;
             align-items: center;   /* centra horizontal */
         
-    /*parte temp*/
+  
     
         }
- 
+        
         /* Botón de cerrar */
         #popup button {
             background-color: #0695e7;
@@ -301,7 +325,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    color: #faf8f8;
     /* MAGIA: Esto dice "cuando sueltes el scroll, alinéame al centro" */
     scroll-snap-align: center; 
 }
@@ -360,8 +384,10 @@ body {
 }
 /*texto de colaboadores*/
 .colab{
-    background-color: #0202025e;
+    color: #22a3e4;
+    background-color: #0000004d;
     border-radius: 10px;
+   
     
 }
 /*footer a mi gusto*/
@@ -419,7 +445,7 @@ body {
 /*sobre mi */ 
 .cardgit {
   width: 15em;
-  height: 20.9em;
+  height: 21.1em;
   background: #202024;
   transition: 1s ease-in-out;
   display: flex;
@@ -437,7 +463,7 @@ body {
 
 .cardgit .info {
   font-weight: 400;
-  color: rgb(19, 222, 240);
+  color: rgb(35, 235, 235);
   display: block;
   text-align: center;
   font-size: 0.72em;
