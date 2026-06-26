@@ -15,20 +15,34 @@ function ver_manga(url) {
     }
 }
 
-// parte de mensaje emergente del codigo
+// parte de mensaje emergente codigo xd
 const popupOverlay = document.getElementById('popupOverlay');
-        const closeBtn = document.getElementById('closePopup');
+const closeBtn = document.getElementById('closePopup');
 
-        closeBtn.addEventListener('click', () => {
-            popupOverlay.style.display = 'none'; // Oculta el pop-up
-        });
+// Si ya lo cerró antes, no mostrarlo
+if (localStorage.getItem("popupVisto")) {
+    popupOverlay.style.display = "none";
+}
+closeBtn.addEventListener('click', () => {
+    popupOverlay.style.display = 'none';
+    localStorage.setItem("popupVisto", "true");
+});
 
-        // Opcional: cerrar también al hacer click fuera de la caja
-        popupOverlay.addEventListener('click', (e) => {
-            if(e.target === popupOverlay) {
-                popupOverlay.style.display = 'none';
-            }
-        });
+popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) {
+        popupOverlay.style.display = 'none';
+        localStorage.setItem("popupVisto", "true");
+    }
+});
+const version = "1.0.7";//actualizar cada vez que agrege algo
+if (localStorage.getItem("popupVersion") !== version) {
+    popupOverlay.style.display = "flex";
+} else {
+    popupOverlay.style.display = "none";
+}
+
+localStorage.setItem("popupVersion", version);
+//fin
 
 document.addEventListener('DOMContentLoaded', () => {
     const personaje = document.querySelector('.personaje-flotante');

@@ -7,7 +7,6 @@
     color: #faf8f8;
     font-size: 200%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    outline: 3px solid rgba(255, 0, 0, 0.411);
     border-radius: 8px;
     background-color: #07070760;
 }
@@ -368,6 +367,7 @@ body {
     outline: 3px solid red;
     margin-top: 25px;
     background-color: #f809092a;
+    border-radius: 5px;
 }
 .comunidadtxt {
     color: #fffdfd;
@@ -384,7 +384,7 @@ body {
     margin: 40px auto 0 auto;  
     padding: 20px;
     overflow: hidden; 
-    background-color: #f8f7f84f;
+    background-color: #111111f8;
     border-radius: 8px;
     box-sizing: border-box;
 }

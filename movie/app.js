@@ -41,3 +41,9 @@ function downloadEpisode(url) {
         alert("¡Aún no hay link de descarga!");
     }
 }
+
+//apartado de disquis
+var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+};
