@@ -24,18 +24,19 @@
                 ⇒Arreglos:visuales y navegación mobile<br><br>
                 ⇒Trabajando en Datos curiosos de<br>k-on!
             <br>⇒Resolviendo mas bugs visuales y malas practicas XD<br><br>
-                ⇒Mensaje emergente resuelto</p>
+                ⇒Mensaje emergente resuelto
+            <br><br>⇒Ura-on capitulos finales en subtitulaje</p>
             
             
             <div>
                 <p class="fechaUP">fecha de actualización</p> 
 <div class="fecha">
-  <div class="letter1 letter" style="--i: 1;">2</div>
-  <div class="letter2 letter" style="--i: 2;">6</div>
+  <div class="letter1 letter" style="--i: 1;">0</div>
+  <div class="letter2 letter" style="--i: 2;">8</div>
   <div class="letter3 letter" style="--i: 3;">|</div>
   <div class="letter4 letter" style="--i: 4;">J</div>
   <div class="letter5 letter" style="--i: 5;">U</div>
-  <div class="letter6 letter" style="--i: 6;">N</div>
+  <div class="letter6 letter" style="--i: 6;">l</div>
   <div class="letter7 letter" style="--i: 7;">I</div>
   <div class="letter8 letter" style="--i: 8;">O</div>
   <div class="letter3 letter" style="--i: 3;">|</div>
@@ -60,6 +61,10 @@
         <p class="subtitulo">disfruta del anime, manga y mucho más... <br> todo en un solo lugar, para los keioners hispanos UWU</p>
     
     </header>
+      <div class="stats shadow">
+  
+  
+</div>
 <!--portadas o cartas de elementos uwu-->
     <div id="contenedor-principal" class="contenedor">
     </div>
@@ -94,7 +99,166 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 
+<div class="stat">
+    <div class="stat-title">Total de keinoers visitantes</div>
+    <div class="stat-value">7mil</div>
+    <div class="stat-desc">desde la creación de la fanweb</div>
+  </div>
+  
+<!--apartado de donasiones-->
+<div class="donation-box">
 
+    <h2>Apoya el proyecto</h2>
+
+    <p>
+        Ayudanos a ser mas accesibles con un dominio web a todos.
+    </p>
+
+    <div class="donation-buttons">
+        <a href="https://ko-fi.com/hizuihirasawa/goal?g=0" class="donate-btn">
+            Donar
+        </a>
+
+        <button class="info-btn" onclick="toggleDonationInfo()">
+            ¿Para qué?
+        </button>
+    </div>
+
+
+    <div id="donation-info" class="donation-info">
+
+        <h3>¿A dónde va la donación?</h3>
+
+        <p>
+            Las donaciones seran solamente para pagar un DOMINIO web, ya que queremos
+            llegar a todos, asi solo bastaria buscar en el navegador sin necesidad de el link explicito,
+            se te daran los creditos de
+        </p>
+
+    </div>
+
+</div>
+
+
+<style>
+
+.donation-box {
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 18px;
+    background: #1c1c1cbd;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+
+.donation-box h2 {
+    margin-bottom: 10px;
+}
+
+
+.donation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+
+.donate-btn,
+.info-btn {
+
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+.donate-btn {
+
+    background: #ff4b7d;
+    color:white;
+
+}
+
+
+.info-btn {
+
+    background:#646363;
+    color:white;
+
+}
+
+
+.donate-btn:hover {
+
+    background:#ff0101;
+
+}
+
+
+.info-btn:hover {
+
+    background:#c567c5;
+
+}
+
+
+
+/* Card oculto */
+
+.donation-info {
+
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+
+    margin-top:0;
+
+    background:#252525;
+    border-radius:12px;
+
+    transition:
+        max-height .4s ease,
+        opacity .4s ease,
+        margin-top .4s ease;
+
+}
+
+
+/* Estado visible */
+
+.donation-info.show {
+
+    max-height:200px;
+    opacity:1;
+
+    margin-top:20px;
+
+}
+
+
+</style>
+
+
+<script>
+
+function toggleDonationInfo(){
+
+    const info = document.getElementById("donation-info");
+
+    info.classList.toggle("show");
+
+}
+
+</script>
 <!-- fin y despues apartado de colaboeradores-->
 
                 <div class="colab"><p> <b>!colaboradores!</b> <br>⇩(>‿◠).ありがとう⇩</p></div>

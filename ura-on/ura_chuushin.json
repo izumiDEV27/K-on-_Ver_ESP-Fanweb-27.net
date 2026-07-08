@@ -39,5 +39,22 @@
     "imagen":"/ura-on/previewcap/cap5.webp",
     "urlVer":"https://www.yourupload.com/embed/7dLV0lxFM3w0",
     "urlDescarga":"https://www.mediafire.com/file/k00kq4nqbmzwixf/K-On%2521_Ura-On%2521_-_05_IzumiFanSUB.mp4/file"
+  },
+  {
+    "id": 6,
+    "titulo":"que animal seriamos?",
+    "descripcion":"las chicas se preguntan que animales serian base a su personalidad",
+    "imagen":"/visual_elements/en_proceso_view.webp",
+    "urlVer":"",
+    "urlDescarga":""
+  },
+  {
+    "id": 7,
+    "titulo":"en fase de subtitulaje",
+    "descripcion":"aun subtitulando xd",
+    "imagen":"/visual_elements/en_proceso_view.webp",
+    "urlVer":"",
+    "urlDescarga":""
   }
+  
 ]

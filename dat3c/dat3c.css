@@ -7,7 +7,7 @@ p, h2{
   align-items: center;
     text-align: center;
     font-size: 95%;
-    background: linear-gradient(90deg, #e60606, #e020e7);
+    background: linear-gradient(90deg, #faf8f8, #e398ec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -20,7 +20,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #a9d9ec;
+  background-color: #d14646;
 }
 
 /* Menú lateral que se queda fijo al hacer scroll (Sticky) */
@@ -29,10 +29,10 @@ body {
   top: 20px;
   width: 250px;
   height: fit-content;
-  background: #e69ee2;
+  background: #e9ade6;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #d81616;
+  border: 1px solid #ff08f3;
 }
 
 .jump-menu ul {
@@ -46,13 +46,14 @@ body {
 
 .jump-menu a {
   text-decoration: none;
-  color: #fcfbfb;
+  color: #e90778;
   transition: color 0.3s, font-weight 0.3s;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Clase que se activará dinámicamente con JS */
 .jump-menu a.active {
-  color: #ff6b81; /* Color característico tipo K-On! */
+  color: #443e3f; /* Color característico tipo K-On! */
   font-weight: bold;
 }
 
