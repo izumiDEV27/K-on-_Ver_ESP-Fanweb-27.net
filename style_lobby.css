@@ -155,21 +155,7 @@ body {
   color: rgb(197, 194, 194);
 }
 
-.stat-value {
-  grid-column-start: 1;
-  white-space: nowrap;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-}
 
-.stat-desc {
-  grid-column-start: 1;
-  white-space: nowrap;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(197, 194, 194);
-}
 
 /* Contenedor de las tarjetas */
 .contenedor {
@@ -500,6 +486,35 @@ body {
     background-color: #111111f8;
     border-radius: 8px;
     box-sizing: border-box;
+}
+/* apartado de contador de visitantes*/
+.counter {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    background-color: #0000007a;
+    border-radius: 5px;
+    margin-top: 35px;
+    margin-block-end: 35px;
+    color: #6e8cf0;
+    outline: 2px solid rgb(247, 0, 255);
+}
+
+
+.counter strong {
+    font-size:50px;
+    color: #fffdfd;
+}
+
+
+@media(max-width:600px){
+
+.counter strong{
+    font-size:35px;
+}
+
 }
 /*texto de colaboadores*/
 .colab{

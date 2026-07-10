@@ -93,7 +93,7 @@ function moverCarrusel(direccion) {
 document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('contenedor-principal');
 
-    // Función para cargar el JSON
+    // Función para cargar el JSON madre
     fetch('ChuushinGlobal.json')
         .then(response => response.json())
         .then(data => {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderizarTarjetas(items) {
         items.forEach(item => {
-            // Creamos la estructura de la tarjeta que ya tienes en tu CSS
+            // Creo la estructura de la tarjeta para que CSS lo use
             const card = document.createElement('a');
             card.href = item.link;
             card.className = 'card';
