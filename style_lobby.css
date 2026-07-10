@@ -3,24 +3,41 @@
    ESTILOS OPTIMIZADOS PARA LOBBY
    ================================
 */
+* {
+    box-sizing:border-box;
+}
+
+html, body {
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+img {
+    max-width:100%;
+    
+}
 .subtitulo {
     color: #faf8f8;
     font-size: 200%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 8px;
     background-color: #07070760;
+    width: fit-content;
+    margin:100px auto 0;
+    
 }
+
 
 
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     
-    /* CAMBIOS CLAVE AQUÍ: */
-    min-height: 100vh;      /* Ocupa al menos el 100% de la altura de la ventana */
-    display: flex;          /* Activa Flexbox */
-    flex-direction: column; /* Organiza los hijos (header, contenedor, footer) en columna */
-    padding: 0;             /* Quitamos padding para que el footer toque los bordes */
+   
+    min-height: 100vh;      
+    display: flex;          
+    flex-direction: column;  
+    padding: 0;             
 
 }
 
@@ -31,8 +48,8 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -1;
@@ -44,9 +61,9 @@ body {
     text-align: center;
     margin-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.288); 
-    padding: 20px;         /* Ajuste simple */
-    border-radius: 10px; /* Estético: solo bordes inferiores redondeados si toca arriba */
-    margin-top: 30px;      /* Para separar del techo si quieres */
+    padding: 20px;         
+    border-radius: 10px; 
+    margin-top: 30px;      
     transition: transform 0.3s ease;
 }
 .header-logo {transition: transform 0.3s ease;
@@ -56,21 +73,13 @@ body {
     transform: scale(1.3);
 }
 
-/* From Uiverse.io by Yaya12085 */ 
-.stats {
-  display: inline-grid;
-  background-color: #111111;
-  color: #fff;
-  border-radius: 1rem;
-  border: 1px solid gray;
-}
+
 
 .shadow {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 .stat {
-  display: inline-grid;
   width: 100%;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 1rem;
@@ -83,10 +92,11 @@ body {
   justify-content: center;
   align-items: center;
   
+
   
 }
 /* apartado de donaciones*/
-/* From Uiverse.io by gharsh11032000 */ 
+
 .card1 {
   position: relative;
   width: 300px;
@@ -165,32 +175,25 @@ body {
     gap: 30px;
     max-width: 1250px;
     
-    /* CAMBIOS CLAVE AQUÍ: */
-    flex: 1;                /* Esto hace que este div crezca y empuje el footer hacia abajo */
-    width: 100%;            /* Asegura ancho completo */
-    align-self: center;     /* Centra el contenedor en el eje cruzado */
+    flex: 1;                
+    width: 100%;            
+    align-self: center; 
+    
       
 }
 
 .card {
-    width: 200px; /* Aumentar ligeramente el ancho para un mejor visual */
+    width: 200px; 
     background: #252544;
-    border-radius: 12px; /* Ligeramente más redondeado */
+    border-radius: 12px; 
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición para sombra */
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: white;
-    /* Añadir una sombra sutil para profundidad */
+    /* Añadi una sombra sutil para profundidad */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-
-
-.card:hover { /* <- Se añade .manga:hover */
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-}
 .card img {
     width: 100%;
     height: 300px;
@@ -212,7 +215,7 @@ body {
 
 /* Estilos mejorados para las etiquetas (tags) */
 .tags-container {
-    min-height: 25px; /* Evita que el contenedor se mueva si no hay tags */
+    min-height: 25px; 
 }
 
 .tag {
@@ -220,8 +223,8 @@ body {
     background: #f80505;
     color: #fff;
     padding: 4px 10px;
-    border-radius: 20px; /* Estilo píldora */
-    font-size: 0.75rem; /* Fuente más pequeña */
+    border-radius: 20px; 
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     display: inline-block;
@@ -245,7 +248,7 @@ body {
     }
     
     .card {
-        width: 180px; /* Mantener un tamaño decente para tablets */
+        width: 180px; /* Mantener un tamaño para tablets */
     }
 
     .card img {
@@ -272,11 +275,11 @@ body {
     
     .card img {
         height: 450px; /* Reducir altura para ahorrar espacio vertical */
-        width: 300px;
+        width: 100%;
     }
     
     .contenedor {
-        /* Fuerza a que se apilen bien si no hay espacio */
+       
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -331,7 +334,7 @@ body {
         
             display: flex;
             flex-direction: column;
-            align-items: center;   /* centra horizontal */
+            align-items: center;   
         
   
     
@@ -367,29 +370,29 @@ body {
         }
 
 
-
+/* gif de yui en la paguina */
 .personaje-flotante {
-    position: fixed; /* Flota sobre el contenido */
-    width: 150px;    /* Ajusta el tamaño a tu gusto */
-    z-index: 9999;   /* Asegura que esté ENCIMA de todo (header, footer, etc.) */
+    position: fixed; 
+    width: 150px;    
+    z-index: 9999;   
     opacity: 0.8;
     /* spawnea en la esquina superior izquierda xd*/
     top: 0;
     left: 0;
     
-    /* ¡Magia! Esto hace que el movimiento tarde 2 segundos y este suave el mov */
+    /* Magia negra :v Esto hace que el movimiento tarde 2 segundos y este suave el mov */
     transition: top 2s ease-in-out, left 2s ease-in-out;
     
-    /* Opcional a gusto: es por quiero que la gente pueda hacer clic en lo que hay DEBAJO de la imagen */
+    /* es por quiero que la gente pueda hacer clic en lo que hay DEBAJO de la imagen */
     pointer-events: none; 
 }
 
 /* El contenedor principal */
 .carrusel-contenedor {
-    position: relative; /* Para poder posicionar las flechas encima */
+    position: relative; 
     width: 100%;
-    max-width: 800px; /* Ancho máximo para que no se vea gigante en PC */
-    margin: 50px auto; /* Centrado en la página */
+    max-width: 800px; 
+    margin: 50px auto; 
     background-color: #0a0a0a67;
     border-radius: 8px;
 }
@@ -397,26 +400,25 @@ body {
 /* La pista donde están los elementos (lo que se mueve) */
 .carrusel-track {
     display: flex;
-    gap: 20px; /* Espacio entre cada tarjeta */
-    overflow-x: auto; /* Permite el scroll horizontal */
-    scroll-behavior: smooth; /* Suaviza el movimiento al hacer clic */
+    gap: 20px; 
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
     
-    /* MAGIA: Esto activa el "imán" */
     scroll-snap-type: x mandatory; 
     
-    /* Ocultar la barra de scroll (opcional, estético) */
-    scrollbar-width: none; /* Firefox */
+    /* Ocultar la barra de scroll (depende y es estetico xd) */
+    scrollbar-width: none; 
 }
 
 .carrusel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none; /* Chrome, Safari, Edge por que luego bugs llegan al chat */
 }
 
 /* Cada tarjeta individual */
 .carrusel-item {
-    min-width: 250px; /* Ancho fijo de cada tarjeta */
+    min-width: 250px; 
     height: 350px;
-    background: #e658588a;
+    background: linear-gradient(90deg, #e60606b2, #c545dfb2);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
@@ -424,7 +426,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #faf8f8;
-    /* MAGIA: Esto dice "cuando sueltes el scroll, alinéame al centro" */
+    
     scroll-snap-align: center; 
 }
 
@@ -453,7 +455,7 @@ body {
 .flecha-izquierda { left: -20px; }
 .flecha-derecha { right: -20px; }
 
-/* En móvil, ocultamos las flechas porque es más fácil deslizar con el dedo */
+/* En móvil, oculto las flechas porque es más fácil deslizar con el dedo */
 @media (max-width: 768px) {
     .carrusel-flecha {
         display: none;
@@ -463,8 +465,11 @@ body {
 
 /* apartado de disquis ajustado xd, esta bien raro*/
 .comentarios{
+    width:100%;
+    max-width:900px;
+    margin:25px auto 0;
+    overflow:hidden;
     outline: 3px solid red;
-    margin-top: 25px;
     background-color: #f809092a;
     border-radius: 5px;
 }
@@ -492,19 +497,24 @@ body {
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:15px;
     flex-wrap:wrap;
-    background-color: #0000007a;
-    border-radius: 5px;
-    margin-top: 35px;
-    margin-block-end: 35px;
-    color: #6e8cf0;
-    outline: 2px solid rgb(247, 0, 255);
+    gap:15px;
+
+    width:fit-content;
+    max-width:90%;
+    margin:35px auto;
+
+    padding:15px 25px;
+
+    background-color:#0000007a;
+    border-radius:10px;
+
+    color:#6e8cf0;
+    outline:2px solid rgb(247,0,255);
 }
 
-
 .counter strong {
-    font-size:50px;
+    font-size:clamp(30px, 5vw, 50px);
     color: #fffdfd;
 }
 
@@ -516,14 +526,16 @@ body {
 }
 
 }
-/*texto de colaboadores*/
-.colab{
-    color: #22a3e4;
-    background-color: #0000004d;
-    border-radius: 10px;
-    margin-top: 100px;
-   
+/*texto de colaboradores*/
+.colab {
+    color:#f6f9fa;
+    background-color:#000000a9;
+    border-radius:10px;
     
+    width:fit-content;
+    margin:100px auto 0;
+    padding:15px 25px;
+    outline:2px solid rgb(255, 0, 0);
 }
 /*footer a mi gusto*/
 .footer {
@@ -536,7 +548,7 @@ body {
   font-size: 13px;
   border-radius: 10px;
   position: relative;
-    z-index: 10; /* Esto lo trae al frente de todo */
+    z-index: 10; 
     width: 100%;
 }
 
@@ -614,7 +626,7 @@ body {
   height: auto;
 }
 
-/* anmacion de fecha*/
+/* animacion de fecha*/
 .fecha {
   color: rgb(223, 52, 203);
   display: flex;
