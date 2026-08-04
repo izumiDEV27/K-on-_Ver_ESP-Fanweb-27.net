@@ -287,87 +287,148 @@ body {
 }
 
 /*parte de mensaje emergente de proceso de desarrollo e implemetación*/
- #popupOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            color: #f00808;
-            /* pate de outline*/
-             
-    
-        }
-.anunD {  
-    color: #fa0303;
-    text-align: center;
-     text-shadow: 
-    -1px -1px 0px white,  
-     1px -1px 0px white,  
-    -1px  1px 0px white,  
-     1px  1px 0px white;
- 
+#popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInPopup 0.4s ease-out forwards;
 }
-.fechaUP{
-    font-size: 1.18rem;
-    color: #f00808;
-    font-family: monospace;
-    text-shadow: 
-    -1px -1px 0px white,  
-     1px -1px 0px white,  
-    -1px  1px 0px white,  
-     1px  1px 0px white;
-}
-        /* Caja del pop-up */
-        #popup {
-            background-color: #00000060;
-            border: 2px solid #de01fc;
-            border-radius: 15px;
-            width: 55%;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        
-            display: flex;
-            flex-direction: column;
-            align-items: center;   
-        
-  
-    
-        }
-        
-        /* Botón de cerrar */
-        #popup button {
-            background-color: #0695e7;
-            border: none;
-            color: rgb(255, 255, 255);
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 15px;
-            transition: 0.3s;
-            
-            
-        }
-        
-        
 
-        #popup button:hover {
-            background-color: #f70606;
-        }
-        /*parte del mensaje de enmedio*/
-        .mensaje-emergente {
-        font-size: 95%;
-        color: #fffdfd;
-        font-family: monospace;
-        
-        
-        }
+@keyframes fadeInPopup {
+    to { opacity: 1; }
+}
+
+/* Caja del pop-up */
+#popup {
+    background: linear-gradient(145deg, rgba(30, 20, 40, 0.95), rgba(15, 10, 20, 0.98));
+    border: 2px solid rgba(222, 1, 252, 0.5);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(222, 1, 252, 0.2), inset 0 0 20px rgba(222, 1, 252, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(20px) scale(0.95);
+    animation: slideUpPopup 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+@keyframes slideUpPopup {
+    to { 
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.anunD {  
+    color: #ff7eb3;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(255, 126, 179, 0.5);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.fecha-container {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 126, 179, 0.2);
+}
+
+.fechaUP {
+    font-size: 0.9rem;
+    color: #ff99c8;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/*parte del mensaje de enmedio*/
+.mensaje-emergente {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 4px solid #de01fc;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.progreso-titulo {
+    color: #de01fc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(222, 1, 252, 0.4);
+}
+
+.progreso-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.progreso-lista li {
+    color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.progreso-lista li:last-child {
+    margin-bottom: 0;
+}
+
+.progreso-lista li span {
+    color: #de01fc;
+    font-weight: bold;
+}
+
+/* Botón de cerrar */
+#popup button {
+    background: linear-gradient(90deg, #ff477e, #de01fc);
+    border: none;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(222, 1, 252, 0.3);
+}
+
+#popup button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(222, 1, 252, 0.6);
+    background: linear-gradient(90deg, #de01fc, #ff477e);
+}
 
 
 /* gif de yui en la paguina */

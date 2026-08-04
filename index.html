@@ -22,41 +22,42 @@
     <!--parte de mensaje emergente de desarollo-->
     <div id="popupOverlay">
         <div id="popup">
-            <h2 class="anunD">!Anuncio de desarrollo!</h2>
-            <p class="mensaje-emergente"> ----〈〈PROGRESO》----<br>
-                <br>⇒Trabajando en segunda temporada<br><br>
-                ⇒Arreglos:visuales y navegación mobile<br><br>
-                ⇒Trabajando en Datos curiosos de<br>k-on!
-                <br>⇒Resolviendo mas bugs visuales y malas practicas XD<br><br>
-                ⇒Mensaje emergente resuelto
-                <br><br>⇒Ura-on capitulos finales en subtitulaje
-                <br><br>⇒ visuales mejorados y arreglados
-            </p>
+            <h2 class="anunD">¡Anuncio de desarrollo!</h2>
 
-
-            <div>
-                <p class="fechaUP">fecha de actualización</p>
-                <div class="fecha">
-                    <div class="letter1 letter" style="--i: 1;">0</div>
-                    <div class="letter2 letter" style="--i: 2;">4</div>
-                    <div class="letter3 letter" style="--i: 3;">|</div>
-                    <div class="letter4 letter" style="--i: 4;">a</div>
-                    <div class="letter5 letter" style="--i: 5;">g</div>
-                    <div class="letter6 letter" style="--i: 6;">o</div>
-                    <div class="letter7 letter" style="--i: 7;">s</div>
-                    <div class="letter8 letter" style="--i: 8;">t</div>
-                    <div class="letter9 letter" style="--i: 9;">o</div>
-                    <div class="letter3 letter" style="--i: 3;">|</div>
-                    <div class="letter9 letter" style="--i: 9;">2</div>
-                    <div class="letter9 letter" style="--i: 9;">0</div>
-                    <div class="letter9 letter" style="--i: 9;">2</div>
-                    <div class="letter9 letter" style="--i: 9;">6</div>
-                </div>
-
+            <div class="mensaje-emergente">
+                <h3 class="progreso-titulo">PROGRESO</h3>
+                <ul class="progreso-lista">
+                    <li><span>⇒</span> Trabajando en segunda temporada</li>
+                    <li><span>⇒</span> Arreglos: visuales y navegación mobile</li>
+                    <li><span>⇒</span> Trabajando en Datos curiosos de k-on!</li>
+                    <li><span>⇒</span> Resolviendo mas bugs visuales y malas practicas XD</li>
+                    <li><span>⇒</span> Mensaje emergente resuelto</li>
+                    <li><span>⇒</span> Ura-on capitulos finales en subtitulaje</li>
+                    <li><span>⇒</span> Visuales mejorados y arreglados</li>
+                </ul>
             </div>
 
-            <button id="closePopup">Entiendo</button>
+            <div class="fecha-container">
+                <p class="fechaUP">Fecha de actualización</p>
+                <div class="fecha">
+                    <div class="letter" style="--i: 1;">0</div>
+                    <div class="letter" style="--i: 2;">4</div>
+                    <div class="letter" style="--i: 3;">/</div>
+                    <div class="letter" style="--i: 4;">a</div>
+                    <div class="letter" style="--i: 5;">g</div>
+                    <div class="letter" style="--i: 6;">o</div>
+                    <div class="letter" style="--i: 7;">s</div>
+                    <div class="letter" style="--i: 8;">t</div>
+                    <div class="letter" style="--i: 9;">o</div>
+                    <div class="letter" style="--i: 10;">/</div>
+                    <div class="letter" style="--i: 11;">2</div>
+                    <div class="letter" style="--i: 12;">0</div>
+                    <div class="letter" style="--i: 13;">2</div>
+                    <div class="letter" style="--i: 14;">6</div>
+                </div>
+            </div>
 
+            <button id="closePopup">¡Entendido!</button>
         </div>
     </div>
     <!--video d fond0 xd-->
@@ -86,18 +87,19 @@
         }
     </style>
 
-    
+
 
     <!-- Anillo de Elementos (Carousel 3D) -->
     <div class="carousel-container">
         <div class="carousel-ring">
             <!-- Elemento Imagen 1 -->
-            
+
             <div class="carousel-item" onclick="openLightbox(this.querySelector('img'))">
                 <img src="https://i.pinimg.com/736x/40/6d/38/406d38957bc4fd12f34c5dfa3d73b86d.jpg" alt="Banner K-ON">
             </div>
-             <div class="carousel-item" onclick="openLightbox(this.querySelector('img'))">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmRR8gmfKnfyJkpqVz1JhAm-sp62bnrdqafc7ym--A65AB1mRggsFj-rw&s=10" alt="Baner K-ON">
+            <div class="carousel-item" onclick="openLightbox(this.querySelector('img'))">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmRR8gmfKnfyJkpqVz1JhAm-sp62bnrdqafc7ym--A65AB1mRggsFj-rw&s=10"
+                    alt="Baner K-ON">
             </div>
             <!-- Elemento Imagen 2 (GIF) -->
             <div class="carousel-item" onclick="openLightbox(this.querySelector('img'))">
@@ -117,7 +119,10 @@
             <!-- Elemento HTML Embebido (Video de YouTube) -->
             <div class="carousel-item" onclick="openLightbox(this.querySelector('iframe'))">
                 <div class="iframe-overlay"></div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEjYdgXOur4?si=Ra00BsbJycWhz_ti" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEjYdgXOur4?si=Ra00BsbJycWhz_ti"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
             </div>
         </div>
     </div>
@@ -159,22 +164,25 @@
         }
     </script>
 
-    
+
 
     <div class="merch-section">
         <div class="merch-content">
             <h2>Apoya Comprando Merch Oficial</h2>
-            <p class="subtitle">Adquiere figuras, CDs, Blu-rays y productos exclusivos de K-ON! para apoyar a los creadores (Kyoto Animation).</p>
-            
+            <p class="subtitle">Adquiere figuras, CDs, Blu-rays y productos exclusivos de K-ON! para apoyar a los
+                creadores (Kyoto Animation).</p>
+
             <div class="merch-image-container">
-                <img src="visual_elements/colab/kyoani.webp" alt="K-ON Merch Oficial" style="background: #fff; padding: 20px;">
+                <img src="visual_elements/colab/kyoani.webp" alt="K-ON Merch Oficial"
+                    style="background: #fff; padding: 20px;">
             </div>
 
             <button onclick="openMerchModal()" class="merch-btn" style="border:none; cursor:pointer;">
                 Ver Catálogo de Merch
             </button>
-            
-            <p class="merch-warning">⚠️ Recuerda: Verifica la disponibilidad de envío a tu región antes de hacer tu pedido.</p>
+
+            <p class="merch-warning">⚠️ Recuerda: Verifica la disponibilidad de envío a tu región antes de hacer tu
+                pedido.</p>
         </div>
     </div>
 
@@ -182,12 +190,15 @@
     <div id="merchModal" class="merch-modal-overlay" onclick="closeMerchModal(event)">
         <div class="merch-modal">
             <span class="merch-modal-close" onclick="closeMerchModal(event)">&times;</span>
-            <h2 style="font-family: 'Poppins', sans-serif; color: #ff8da1; border-bottom: 1px solid #444; padding-bottom: 15px; margin-top: 0;">Catálogo de Merch Oficial</h2>
-            
+            <h2
+                style="font-family: 'Poppins', sans-serif; color: #ff8da1; border-bottom: 1px solid #444; padding-bottom: 15px; margin-top: 0;">
+                Catálogo de Merch Oficial</h2>
+
             <div class="merch-grid">
-                
+
                 <!-- PLANTILLA 1: Figura -->
-                <a href="https://www.amazon.com.mx/K-Complete-Omnibus-Kakifly/dp/1975361741/ref=sr_1_1?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-1&ufe=app_do%3Aamzn1.fos.1f47693a-e1a6-4b06-ba29-28033858cf82" target="_blank" class="merch-card">
+                <a href="https://www.amazon.com.mx/K-Complete-Omnibus-Kakifly/dp/1975361741/ref=sr_1_1?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-1&ufe=app_do%3Aamzn1.fos.1f47693a-e1a6-4b06-ba29-28033858cf82"
+                    target="_blank" class="merch-card">
                     <img src="https://m.media-amazon.com/images/I/81YgIz7kjqL._SY425_.jpg" alt="Figura Yui">
                     <div>
                         <h4>manga/tomo todos en uno</h4>
@@ -197,8 +208,10 @@
                 </a>
 
                 <!-- PLANTILLA 2: CD de Música -->
-                <a href="https://www.amazon.com.mx/Houkago-Teatime-Importado-K/dp/B002B9TSK6/ref=pd_bxgy_thbs_d_sccl_2/138-9660185-0304940?pd_rd_w=edLPd&content-id=amzn1.sym.fb8bda71-a53d-4976-bfa6-6cd2bf3e52a3&pf_rd_p=fb8bda71-a53d-4976-bfa6-6cd2bf3e52a3&pf_rd_r=9WYQRBCAYYSF9MA30KNH&pd_rd_wg=6krlC&pd_rd_r=6d064d1d-1817-4117-9168-9bd149d08744&pd_rd_i=B002B9TSK6&psc=1" target="_blank" class="merch-card">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71gw2gs+VvL._AC_UL232_SR232,232_.jpg" alt="CD Ho-kago Tea Time">
+                <a href="https://www.amazon.com.mx/Houkago-Teatime-Importado-K/dp/B002B9TSK6/ref=pd_bxgy_thbs_d_sccl_2/138-9660185-0304940?pd_rd_w=edLPd&content-id=amzn1.sym.fb8bda71-a53d-4976-bfa6-6cd2bf3e52a3&pf_rd_p=fb8bda71-a53d-4976-bfa6-6cd2bf3e52a3&pf_rd_r=9WYQRBCAYYSF9MA30KNH&pd_rd_wg=6krlC&pd_rd_r=6d064d1d-1817-4117-9168-9bd149d08744&pd_rd_i=B002B9TSK6&psc=1"
+                    target="_blank" class="merch-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71gw2gs+VvL._AC_UL232_SR232,232_.jpg"
+                        alt="CD Ho-kago Tea Time">
                     <div>
                         <h4>CD: Ho-kago Tea Time I</h4>
                         <div class="price">Aprox. $87.00 USD Aprox</div>
@@ -206,7 +219,8 @@
                     </div>
                 </a>
 
-                <a href="https://www.amazon.com.mx/GEKICHUKASHU-HOKAGO-TIME-edición-regular/dp/B0042XA5X8/ref=sr_1_5?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-5&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6" target="_blank" class="merch-card">
+                <a href="https://www.amazon.com.mx/GEKICHUKASHU-HOKAGO-TIME-edición-regular/dp/B0042XA5X8/ref=sr_1_5?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-5&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6"
+                    target="_blank" class="merch-card">
                     <img src="https://m.media-amazon.com/images/I/71ashmr5SvL._AC_SX385_.jpg" alt="CD Ho-kago Tea Time">
                     <div>
                         <h4>CD: Ho-kago Tea Time II (edición regular)</h4>
@@ -215,7 +229,8 @@
                     </div>
                 </a>
 
-                 <a href="https://www.amazon.com.mx/GEKICHUKASHU-HOKAGO-TIME-edición-regular/dp/B0042XA5X8/ref=sr_1_5?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-5&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6" target="_blank" class="merch-card">
+                <a href="https://www.amazon.com.mx/GEKICHUKASHU-HOKAGO-TIME-edición-regular/dp/B0042XA5X8/ref=sr_1_5?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830318&sprefix=k-on%2Caps%2C177&sr=8-5&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6"
+                    target="_blank" class="merch-card">
                     <img src="https://m.media-amazon.com/images/I/71ashmr5SvL._AC_SX385_.jpg" alt="CD Ho-kago Tea Time">
                     <div>
                         <h4>CD Don't Say "Lazy" [Regular Edition] </h4>
@@ -224,8 +239,9 @@
                     </div>
                 </a>
 
-                
-                <a href="https://www.amazon.com.mx/K-on-Ultimate-Collection-Blu-ray/dp/B07Y4JJMV4/ref=sr_1_2?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830137&sprefix=k-on%2Caps%2C177&sr=8-2&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6" target="_blank" class="merch-card">
+
+                <a href="https://www.amazon.com.mx/K-on-Ultimate-Collection-Blu-ray/dp/B07Y4JJMV4/ref=sr_1_2?__mk_es_MX=ÅMÅŽÕÑ&crid=1DAVRD2765RSU&dib=eyJ2IjoiMSJ9.cjAUyosStglFNSgb8mlX301sQ6vAqHPXg1E03SgeF3CVxnzqE90_V7JPIbz35xKWyvZyUot0IEzPgmYm-c2WX4Z7ZQjpcYAgrwp6vsM3wwDFnXYrC_5bdEV0EXs2Kj0UDB-ehnXriIqjotGUlMhXoFcKMxDkQISVOa6-pc2QMRL6Je3oHv9Xqq9Q0GneYwF39kUc2Evumy_n0QnLcDnkLKu5neAQ6CTnbSQcAuAO9ewvF6ifqCW9C4ZJ7eJtdL-GtQerF8B-P1rSUrIofDG9Ad4K7yagvu1c217fvhdZxgk.yVWyem6Ug9yXbBe35hB-75WH5n8UZqtfRC8FQVQt5DQ&dib_tag=se&keywords=k-on&qid=1785830137&sprefix=k-on%2Caps%2C177&sr=8-2&ufe=app_do%3Aamzn1.fos.8a90e69c-45ea-4ce4-8795-da8fd1ef78a6"
+                    target="_blank" class="merch-card">
                     <img src="https://m.media-amazon.com/images/I/71Bc5JTASZL._AC_SX342_.jpg" alt="blue-ray K-ON">
                     <div>
                         <h4>blue-ray jp/en K-ON!</h4>
@@ -244,7 +260,8 @@
                 </a>
 
                 <a href="https://a.co/d/06u2ZCAM" target="_blank" class="merch-card">
-                    <img src="https://m.media-amazon.com/images/I/51-unsqslHL._AC_SY300_SX300_QL70_ML2_.jpg" alt="blue-ray K-ON">
+                    <img src="https://m.media-amazon.com/images/I/51-unsqslHL._AC_SY300_SX300_QL70_ML2_.jpg"
+                        alt="blue-ray K-ON">
                     <div>
                         <h4>K-ON! Yui Hirasawa Trio-Try-iT</h4>
                         <div class="price">Aprox. $80.00 USD Aprox</div>
