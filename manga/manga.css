@@ -1,30 +1,197 @@
-/* From Uiverse.io by necatimertmetin */ 
-.z {
-  position: absolute;
-  align-items: center;
-  font-size: 32px;
-  opacity: 0;
-  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.z-1 {
-  animation: swayUpToRight 2s ease-out infinite;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
-.z-2 {
-  animation: swayUpToRight 2s ease-out 0.5s infinite;
+
+/* Encabezado */
+.manga-header {
+    background: linear-gradient(90deg, #ff4b7d, #ff8da1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 15px 30px;
+    z-index: 10;
 }
-.z-3 {
-  animation: swayUpToRight 2s ease-out 1s infinite;
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-.z-4 {
-  animation: swayUpToRight 2s ease-out 1.5s infinite;
+
+.manga-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
-@keyframes swayUpToRight {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(80px, -100px) rotate(30deg);
-    opacity: 0;
-  }
+
+.manga-header h1 span {
+    font-weight: 400;
+    color: #ffe6eb;
+}
+
+.back-btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+/* Contenedor Principal */
+.manga-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Menú Lateral (Sidebar) */
+.sidebar {
+    width: 320px;
+    background: #222;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #2a2a2a;
+    border-bottom: 2px solid #ff4b7d;
+}
+
+.sidebar-header h3 {
+    font-size: 16px;
+    color: #ff8da1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chapter-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.chapter-list li {
+    border-bottom: 1px solid #333;
+}
+
+.chapter-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ddd;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.chapter-btn:hover {
+    background: #333;
+    color: #fff;
+    padding-left: 25px;
+}
+
+/* Botón activo (capítulo que se está leyendo) */
+.chapter-btn.active {
+    background: rgba(255, 75, 125, 0.2);
+    color: #ff4b7d;
+    border-left: 4px solid #ff4b7d;
+    font-weight: 600;
+}
+
+/* Área de Lectura de PDF */
+.reader-container {
+    flex: 1;
+    background: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pantalla de espera (Placeholder) */
+.placeholder-box {
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.yui-wait {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 75, 125, 0.4);
+}
+
+.placeholder-box h2 {
+    color: #ff4b7d;
+    margin-bottom: 10px;
+}
+
+.placeholder-box p {
+    color: #aaa;
+}
+
+.instruccion-dev {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #555 !important;
+}
+
+/* Iframe que mostrará el Lector PDF de Google Drive */
+.iframe-wrapper {
+    width: 100%;
+    height: 100%;
+    display: none; /* JS lo volverá visible */
+}
+
+.iframe-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #111;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .manga-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: 250px; /* Un tamaño fijo en móviles para no comerse toda la pantalla */
+        border-right: none;
+        border-bottom: 2px solid #ff4b7d;
+    }
 }

@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>k-on!_peli_ES.net</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="/visual_elements/yui-con-web-principal.png">
+    <link rel="icon" href="/visual_elements/yui-con-web-principal.png">
 </head>
 
 <body>
 
     <!-- Barra superior con botón de cerrar -->
-    <div class="header"> 
-    <span class="cerrar" onclick="window.history.back()">✕ Cerrar</span>
-</div>
+    <div class="header">
+        <span class="cerrar" onclick="window.history.back()">⬅ Volver</span>
+    </div>
 
     <!-- Contenedor principal (video izquierda + info derecha) -->
     <div class="container">
 
         <!-- Sección del video -->
         <div class="video-section">
-
-            <!-- Iframe donde cargaremos el video de Drive -->
-            <iframe id="drivePlayer"
-                    frameborder="0"
-                    allow="autoplay"
-                    allowfullscreen>
-            </iframe>
-
+            <div class="video-wrapper">
+                <!-- Iframe donde cargaremos el video de Drive -->
+                <iframe id="drivePlayer" frameborder="0" allow="autoplay" allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
         <!-- Panel derecho con la información del anime/peli -->
         <div class="info-section">
 
             <div class="info-header">
-                <img src="https://m.media-amazon.com/images/M/MV5BM2NkZWE0ZDgtZjFhZS00YjY0LTljMjEtMmE0MDJkNGZlMTczXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="poster">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2NkZWE0ZDgtZjFhZS00YjY0LTljMjEtMmE0MDJkNGZlMTczXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+                    class="poster" alt="K-On Poster">
 
-                <div>
-                    <h3>K-On!: La Película (2011)</h3>
-                    <P>animado por kyoto animation</P>
-                    <p>Animación, Aventura, Comedia, Familiar, Música</p>
+                <div class="info-details">
+                    <h3>K-On! La Película (2011)</h3>
+                    <p class="studio">Animado por Kyoto Animation</p>
+                    <p class="tags">Animación • Música • Comedia</p>
                 </div>
             </div>
 
             <hr>
 
-            <h2>pelicula [720P]</h2>
+            <h2>Calidad: Película [720p HD]</h2>
 
-            <!-- Reacciones estilo plataformas -->
+            <!-- Botón de Descarga -->
             <div class="reacciones">
-                <button onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=15Xk9pa_B8uQPtPqIkh9zU8TILJ7vnaDY&export=download&authuser=0')">Descarga con este boton xd</button>
+                <button class="btn-descarga"
+                    onclick="downloadEpisode('https://drive.usercontent.google.com/download?id=15Xk9pa_B8uQPtPqIkh9zU8TILJ7vnaDY&export=download&authuser=0')">
+                    ⬇ Descargar Película
+                </button>
             </div>
-<div id="disqus_thread"></div>
 
-<script>
-var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = window.location.pathname;
-};
+            <div id="disqus_thread"></div>
 
-(function () {
-    var d = document, s = d.createElement("script");
-    s.src = "https://k-on-fanweb-esp.disqus.com/embed.js";
-    s.setAttribute("data-timestamp", +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = window.location.pathname;
+                };
+
+                (function () {
+                    var d = document, s = d.createElement("script");
+                    s.src = "https://k-on-fanweb-esp.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
         </div>
     </div>
 
     <!-- Archivo JavaScript -->
     <script src="app.js"></script>
-   
+
 </body>
+
 </html>

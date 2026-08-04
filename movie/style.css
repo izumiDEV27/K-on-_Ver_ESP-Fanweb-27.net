@@ -1,99 +1,267 @@
-/* Reset visual básico */
-body {
-    margin: 0;
-    background: #000;
-    color: white;
-    font-family: Arial, sans-serif;
+/* Variables globales y fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #0f0f11;
+    --panel-bg: #1a1a1d;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent: #ff4b7d;
+    --accent-hover: #ff1f5a;
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Barra superior */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Para que el scroll sea solo en las áreas necesarias */
+}
+
+/* Barra superior elegante */
 .header {
-    padding: 15px;
-    background: #0a0a0a;
-    border-bottom: 1px solid #2b2b2b;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(15, 15, 17, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
 }
 
 .cerrar {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Contenedor general dividido en 2 columnas */
+.cerrar:hover {
+    color: var(--accent);
+}
+
+/* Contenedor general */
 .container {
     display: flex;
     height: calc(100vh - 60px);
+    width: 100%;
 }
 
 /* Zona izquierda: video */
 .video-section {
     flex: 70%;
     position: relative;
-    background: black;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Iframe del video ocupa todo el espacio disponible */
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Iframe del video */
 #drivePlayer {
     width: 100%;
     height: 100%;
-    background: #111;
+    background: #000;
+    border: none;
 }
 
 /* Zona derecha: info del video/anime */
 .info-section {
     flex: 30%;
-    background: #111;
-    padding: 20px;
+    background: var(--panel-bg);
+    padding: 30px;
     overflow-y: auto;
+    border-left: 1px solid var(--border-color);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+}
+
+/* Scrollbar personalizado para el panel de info */
+.info-section::-webkit-scrollbar {
+    width: 8px;
+}
+.info-section::-webkit-scrollbar-track {
+    background: var(--panel-bg);
+}
+.info-section::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
 }
 
 /* Cabecera del panel derecho */
 .info-header {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin-bottom: 25px;
 }
 
 .poster {
-    width: 80px;
-    height: 110px;
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-/* Botones de reacción */
+.info-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-details h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.info-details .studio {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.info-details .tags {
+    font-size: 13px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.info-section h2 {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-section h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+/* Botones de acción */
 .reacciones {
     display: flex;
-    gap: 8px;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.react {
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: none;
-    background: #222;
+.btn-descarga {
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
     color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 75, 125, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.react:hover {
-    background: #555;
+.btn-descarga:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 75, 125, 0.5);
 }
 
-/* Adaptación para pantallas pequeñas */
+/* Ajuste de Disqus */
+#disqus_thread {
+    width: 100%;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* =========================================
+   Adaptación para pantallas pequeñas (Mobile)
+   ========================================= */
 @media (max-width: 900px) {
-    .container {
-        flex-direction: column;
+    body {
+        overflow-y: auto; /* Permitir scroll en móvil */
     }
 
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* El video debe mantener proporción 16:9 en móviles */
     .video-section {
-        height: 60vh;
+        flex: none;
+        width: 100%;
+        padding: 0; /* Sin padding para que ocupe todo el ancho */
+        aspect-ratio: 16 / 9;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+    }
+
+    .video-wrapper {
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .info-section {
+        flex: none;
+        width: 100%;
         height: auto;
+        border-left: none;
+        padding: 20px;
+        overflow: visible; /* Scroll lo maneja el body */
     }
-}
-/*disqus fix*/
-#disqus_thread {
-  width: 100%;
-  margin-top: 20px;
+
+    .info-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .poster {
+        width: 80px;
+        height: 110px;
+    }
 }
