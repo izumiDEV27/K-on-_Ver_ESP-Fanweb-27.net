@@ -35,7 +35,7 @@ body.dark-mode .popup {
   box-shadow: 0 4px 12px rgba(92, 184, 92, 0.4);
 }
 .episode-card.watched h3::after {
-  content: " ✅ Visto";
+  content: " (─‿‿─) Visto";
   color: #5cb85c;
   font-size: 0.8em;
   margin-left: 5px;

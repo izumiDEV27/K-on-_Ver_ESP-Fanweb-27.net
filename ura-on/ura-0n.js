@@ -2,7 +2,7 @@
 // este js es muy basico, solo es para reproducir y ejecutar acciones de la web                                      
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   // --- 1. Botones de Creadores ---
   const botones = document.querySelectorAll(".creadores");
   botones.forEach(boton => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   konLogo.addEventListener('click', () => {
     yuiFullscreen.style.display = 'flex';
-    
+
     setTimeout(() => {
       yuiFullscreen.style.display = 'none';
     }, 5000); // 5 segundos
@@ -48,50 +48,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Abre el episodio en el modal
 function openModal(url) {
-    const modal = document.getElementById("videoModal");
-    const videoFrame = document.getElementById("videoFrame");
-    
-    // esta parte ve si la URL no está vacía
-    if (url && modal && videoFrame) { 
-        if (url.trim() !== '') {
-            localStorage.setItem('watched_' + url, 'true');
-            if (typeof applyWatchedStatus === 'function') applyWatchedStatus();
-        }
-        videoFrame.src = url; // asigna el link del capítulo
-        modal.style.display = "flex"; // muestra el modal
-    } else {
-        alert("¡Este episodio aún no está disponible!");
+  const modal = document.getElementById("videoModal");
+  const videoFrame = document.getElementById("videoFrame");
+
+  // esta parte ve si la URL no está vacía
+  if (url && modal && videoFrame) {
+    if (url.trim() !== '') {
+      localStorage.setItem('watched_' + url, 'true');
+      if (typeof applyWatchedStatus === 'function') applyWatchedStatus();
     }
+    videoFrame.src = url; // asigna el link del capítulo
+    modal.style.display = "flex"; // muestra el modal
+  } else {
+    alert("¡Este episodio aún no está disponible!");
+  }
 }
 
 // Abre el enlace de descarga
 function downloadEpisode(url) {
-    if (url) {
-        window.open(url, "_blank");
-    } else {
-        alert("¡Aún no hay link de descarga!");
-    }
+  if (url) {
+    window.open(url, "_blank");
+  } else {
+    alert("¡Aún no hay link de descarga!");
+  }
 }
 
 // funcion aun no agregada, ya no recuerdo para que era xd, puedes borrarla
 function openEpisode(url) {
-    window.open(url, "_blank");
+  window.open(url, "_blank");
 }
 
 //scuripto ura
 async function cargarEpisodios() {
-    const container = document.getElementById('episodes-container');
-    
-    try {
-        // Cambia 'episodios.json' por la ruta real de tu archivo
-        const response = await fetch('/ura-on/ura_chuushin.json');
-        const episodios = await response.json();
+  const container = document.getElementById('episodes-container');
 
-        episodios.forEach(ep => {
-            const card = document.createElement('div');
-            card.className = 'episode-card'; // Mantiene tus estilos de CSS
+  try {
+    // Cambia 'episodios.json' por la ruta real de tu archivo
+    const response = await fetch('/ura-on/ura_chuushin.json');
+    const episodios = await response.json();
 
-            card.innerHTML = `
+    episodios.forEach(ep => {
+      const card = document.createElement('div');
+      card.className = 'episode-card'; // Mantiene tus estilos de CSS
+
+      card.innerHTML = `
                 <img src="${ep.imagen}" alt="Ep ${ep.id}">
                 <h3>${ep.titulo}</h3>
                 <p>${ep.descripcion}</p>
@@ -100,11 +100,11 @@ async function cargarEpisodios() {
                     <button onclick="downloadEpisode('${ep.urlDescarga}')">Descargar</button>
                 </div>
             `;
-            container.appendChild(card);
-        });
-    } catch (error) {
-        console.error("Error al cargar los episodios:", error);
-    }
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error al cargar los episodios:", error);
+  }
 }
 
 // Llama a la función cuando cargue el DOM
@@ -132,7 +132,7 @@ function applyWatchedStatus() {
 function setupThemeToggle() {
   const toggleBtn = document.createElement('button');
   toggleBtn.id = 'theme-toggle';
-  toggleBtn.innerHTML = 'ðŸŒ™ Modo Oscuro';
+  toggleBtn.innerHTML = '(─‿‿─) Activar Modo Oscuro';
   toggleBtn.style.position = 'fixed';
   toggleBtn.style.bottom = '20px'; // poner en bottom-left para que no tape los logos
   toggleBtn.style.left = '20px';
@@ -145,23 +145,23 @@ function setupThemeToggle() {
   toggleBtn.style.cursor = 'pointer';
   toggleBtn.style.fontWeight = 'bold';
   toggleBtn.style.boxShadow = '0 4px 12px #0002';
-  
+
   document.body.appendChild(toggleBtn);
 
   // Check saved theme
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
-    toggleBtn.innerHTML = 'â˜€ï¸ Modo Claro';
+    toggleBtn.innerHTML = '( ͡❛ ω ͡❛) Activar Modo Claro';
   }
 
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
       localStorage.setItem('theme', 'dark');
-      toggleBtn.innerHTML = 'â˜€ï¸ Modo Claro';
+      toggleBtn.innerHTML = '( ͡❛ ω ͡❛) Activar Modo Claro';
     } else {
       localStorage.setItem('theme', 'light');
-      toggleBtn.innerHTML = 'ðŸŒ™ Modo Oscuro';
+      toggleBtn.innerHTML = '(─‿‿─) Activar Modo Oscuro';
     }
   });
 }
@@ -169,5 +169,5 @@ function setupThemeToggle() {
 document.addEventListener("DOMContentLoaded", () => {
   setupThemeToggle();
   // Un pequeÃ±o retraso para Ura-on que genera las cartas asincronamente
-  setTimeout(applyWatchedStatus, 500); 
+  setTimeout(applyWatchedStatus, 500);
 });
