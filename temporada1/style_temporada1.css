@@ -1,10 +1,18 @@
+:root {
+  --bg: #f2f0ff;
+  --primary: #c59cff;
+  --secondary: #ff9ecf;
+  --accent: #ffe48c;
+  --text: #3d3d50;
+}
+
 header h1 {font-size: 2.5em;
-    color: #fd0026;
+    color: var(--primary);
     text-shadow:
-  -2px -2px 0 white,
-   2px -2px 0 white,
-  -2px  2px 0 white,
-   2px  2px 0 white;
+  -2px -2px 0 var(--accent),
+   2px -2px 0 var(--accent),
+  -2px  2px 0 var(--accent),
+   2px  2px 0 var(--accent);
 margin-bottom: 10px;
     
 }
@@ -17,34 +25,38 @@ header p {
   margin: 0 auto 30px auto;
   font-size: 1.1em;
   line-height: 1.8;
-  color: #fcfdfd;
+  color: var(--text);
   text-align: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 12px #0002;
+  border: 2px solid var(--accent);
   padding: 15px 25px;
-  border-radius: 15px;
+  border-radius: 12px;
   backdrop-filter: blur(5px);
 }
 .creadores {
-  background-color: #ff0000;
-  color: rgb(255, 255, 255);
-  border: none;
+  background: linear-gradient(to bottom, var(--accent), var(--secondary));
+  color: var(--text);
+  border: 1px solid #fff;
+  box-shadow: 0 4px 12px #0002;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .creadores:hover {
-  background-color: #ff8383;
   transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 
 body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background-color: #111;
-      color: white;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     /*POR QUE ANDAS VIENDO EL CODIGO CHISMOSO XD*/
@@ -63,13 +75,15 @@ body {
 
     
     .popup {
-      background: #222;
+      background: var(--bg);
       padding: 30px;
-      border-radius: 15px;
+      border-radius: 12px;
+      border: 3px dashed var(--secondary);
+      color: var(--text);
       text-align: center;
       width: 90%;
       max-width: 400px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 12px #0002;
       animation: fadeIn 0.4s ease;
     }
 
@@ -87,17 +101,19 @@ body {
     }
 
     .popup span {
-      color: #00ffae; 
+      color: var(--primary); 
       font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     
     .popup button {
-      background: #00aaff;
-      border: none;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      border: 1px solid var(--primary);
+      box-shadow: 0 4px 12px #0002;
       color: white;
       padding: 10px 20px;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
@@ -105,7 +121,8 @@ body {
     }
 
     .popup button:hover {
-      background: #0088cc;
+      background: linear-gradient(to bottom, var(--secondary), var(--primary));
+      transform: scale(1.05);
     }
 
     
@@ -134,7 +151,7 @@ body {
 }
 
 body {
-    color: #fff;
+    color: var(--text);
     overflow-x: hidden;
 }
 
@@ -147,7 +164,8 @@ body {
     min-height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.5);
+    opacity: 0.15;
+    mix-blend-mode: overlay;
 }
 
 
@@ -210,19 +228,22 @@ header p {
 main {
     padding: 40px;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
     margin: 0 auto;
     width: 90%;
+    border: 2px dashed var(--primary);
 }
 
 main h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #ffd6e0;
+    color: var(--primary);
+    text-shadow: 1px 1px 0px white;
 }
 main h3 {
-  color: aqua;
+  color: var(--text);
 }
 
 /* Grid de episodios */
@@ -234,8 +255,11 @@ main h3 {
 }
 
 .episode-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
+    border: 1px solid var(--accent);
+    color: var(--text);
     width: 90%;
     padding: 15px;
     text-align: center;
@@ -260,18 +284,21 @@ main h3 {
 }
 
 button {
-    background-color: #ffb6c1;
-    border: none;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border: 1px solid #fff;
+    box-shadow: 0 4px 12px #0002;
     padding: 10px 20px;
-    border-radius: 20px;
-    color: #333;
+    border-radius: 12px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, filter 0.3s;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #ff89a5;
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 
 /* Footer */
