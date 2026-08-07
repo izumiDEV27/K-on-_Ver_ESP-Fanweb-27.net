@@ -21,7 +21,8 @@ body {
     background: var(--bg-color);
     color: var(--text-main);
     font-family: 'Poppins', sans-serif;
-    overflow: hidden; /* Para que el scroll sea solo en las áreas necesarias */
+    overflow: hidden;
+    /* Para que el scroll sea solo en las áreas necesarias */
 }
 
 /* Barra superior elegante */
@@ -93,16 +94,18 @@ body {
     padding: 30px;
     overflow-y: auto;
     border-left: 1px solid var(--border-color);
-    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Scrollbar personalizado para el panel de info */
 .info-section::-webkit-scrollbar {
     width: 8px;
 }
+
 .info-section::-webkit-scrollbar-track {
     background: var(--panel-bg);
 }
+
 .info-section::-webkit-scrollbar-thumb {
     background: #333;
     border-radius: 4px;
@@ -120,7 +123,7 @@ body {
     height: 140px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .info-details {
@@ -148,7 +151,7 @@ body {
 .info-details .tags {
     font-size: 13px;
     color: var(--text-muted);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 6px 10px;
     border-radius: 6px;
     display: inline-block;
@@ -212,7 +215,7 @@ hr {
 #disqus_thread {
     width: 100%;
     margin-top: 40px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
 }
@@ -222,7 +225,8 @@ hr {
    ========================================= */
 @media (max-width: 900px) {
     body {
-        overflow-y: auto; /* Permitir scroll en móvil */
+        overflow-y: auto;
+        /* Permitir scroll en móvil */
     }
 
     .container {
@@ -234,7 +238,8 @@ hr {
     .video-section {
         flex: none;
         width: 100%;
-        padding: 0; /* Sin padding para que ocupe todo el ancho */
+        padding: 0;
+        /* Sin padding para que ocupe todo el ancho */
         aspect-ratio: 16 / 9;
         position: sticky;
         top: 0;
@@ -252,7 +257,8 @@ hr {
         height: auto;
         border-left: none;
         padding: 20px;
-        overflow: visible; /* Scroll lo maneja el body */
+        overflow: visible;
+        /* Scroll lo maneja el body */
     }
 
     .info-header {
