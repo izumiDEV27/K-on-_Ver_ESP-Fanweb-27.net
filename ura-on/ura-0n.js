@@ -53,6 +53,10 @@ function openModal(url) {
     
     // esta parte ve si la URL no está vacía
     if (url && modal && videoFrame) { 
+        if (url.trim() !== '') {
+            localStorage.setItem('watched_' + url, 'true');
+            if (typeof applyWatchedStatus === 'function') applyWatchedStatus();
+        }
         videoFrame.src = url; // asigna el link del capítulo
         modal.style.display = "flex"; // muestra el modal
     } else {
@@ -105,3 +109,65 @@ async function cargarEpisodios() {
 
 // Llama a la función cuando cargue el DOM
 document.addEventListener("DOMContentLoaded", cargarEpisodios);
+// --- LOGICA DE MODO OSCURO Y CAPITULOS VISTOS ---
+
+// Aplicar estilos a capÃ­tulos vistos
+function applyWatchedStatus() {
+  const buttons = document.querySelectorAll('button[onclick^="openModal"]');
+  buttons.forEach(btn => {
+    const match = btn.getAttribute('onclick').match(/openModal\(['"]([^'"]+)['"]\)/);
+    if (match && match[1]) {
+      const url = match[1];
+      if (localStorage.getItem('watched_' + url) === 'true') {
+        const card = btn.closest('.episode-card');
+        if (card) {
+          card.classList.add('watched');
+        }
+      }
+    }
+  });
+}
+
+// Configurar BotÃ³n de Tema
+function setupThemeToggle() {
+  const toggleBtn = document.createElement('button');
+  toggleBtn.id = 'theme-toggle';
+  toggleBtn.innerHTML = 'ðŸŒ™ Modo Oscuro';
+  toggleBtn.style.position = 'fixed';
+  toggleBtn.style.bottom = '20px'; // poner en bottom-left para que no tape los logos
+  toggleBtn.style.left = '20px';
+  toggleBtn.style.zIndex = '10000';
+  toggleBtn.style.background = 'var(--primary)';
+  toggleBtn.style.color = '#fff';
+  toggleBtn.style.border = '2px solid #fff';
+  toggleBtn.style.padding = '10px 15px';
+  toggleBtn.style.borderRadius = '20px';
+  toggleBtn.style.cursor = 'pointer';
+  toggleBtn.style.fontWeight = 'bold';
+  toggleBtn.style.boxShadow = '0 4px 12px #0002';
+  
+  document.body.appendChild(toggleBtn);
+
+  // Check saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.innerHTML = 'â˜€ï¸ Modo Claro';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      toggleBtn.innerHTML = 'â˜€ï¸ Modo Claro';
+    } else {
+      localStorage.setItem('theme', 'light');
+      toggleBtn.innerHTML = 'ðŸŒ™ Modo Oscuro';
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupThemeToggle();
+  // Un pequeÃ±o retraso para Ura-on que genera las cartas asincronamente
+  setTimeout(applyWatchedStatus, 500); 
+});

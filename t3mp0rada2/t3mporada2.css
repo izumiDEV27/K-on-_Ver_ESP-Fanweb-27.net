@@ -228,19 +228,22 @@ header p {
 main {
     padding: 40px;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
     margin: 0 auto;
     width: 90%;
+    border: 2px dashed var(--primary);
 }
 
 main h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #ffd6e0;
+    color: var(--primary);
+    text-shadow: 1px 1px 0px white;
 }
 main h3 {
-  color: aqua;
+  color: var(--text);
 }
 
 /* Grid de episodios */
@@ -252,8 +255,11 @@ main h3 {
 }
 
 .episode-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
+    border: 1px solid var(--accent);
+    color: var(--text);
     width: 90%;
     padding: 15px;
     text-align: center;
@@ -278,18 +284,21 @@ main h3 {
 }
 
 button {
-    background-color: #ffb6c1;
-    border: none;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    border: 1px solid #fff;
+    box-shadow: 0 4px 12px #0002;
     padding: 10px 20px;
-    border-radius: 20px;
-    color: #333;
+    border-radius: 12px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, filter 0.3s;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #ff89a5;
+    filter: brightness(1.1);
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -500,3 +509,43 @@ footer {
 }
 
 /* no le se aun a esto, soy mas de logica, por que desarrollo web es algo engorroso */
+/* --- DARK MODE --- */
+body.dark-mode {
+  --bg: #1e1e24;
+  --primary: #a370e0;
+  --secondary: #d66ba8;
+  --text: #e0e0e0;
+  --accent: #d4b248;
+}
+
+body.dark-mode main {
+  background-color: rgba(30, 30, 30, 0.6);
+  border-color: var(--primary);
+}
+
+body.dark-mode header p {
+  background-color: rgba(30, 30, 30, 0.7);
+}
+
+body.dark-mode .episode-card {
+  background-color: #2a2a35;
+  border-color: var(--secondary);
+}
+
+body.dark-mode .popup {
+  background: var(--bg);
+  border-color: var(--secondary);
+}
+
+/* --- WATCHED EPISODES --- */
+.episode-card.watched {
+  opacity: 0.7;
+  border: 2px solid #5cb85c !important;
+  box-shadow: 0 4px 12px rgba(92, 184, 92, 0.4);
+}
+.episode-card.watched h3::after {
+  content: " âœ… Visto";
+  color: #5cb85c;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
