@@ -2,17 +2,18 @@
   --bg: #f2f0ff;
   --primary: #c59cff;
   --secondary: #ff9ecf;
-  --accent: #ffe48c;
+  --accent: #f7f7f1f3;
   --text: #3d3d50;
 }
 
 header h1 {font-size: 2.5em;
-    color: var(--primary);
+    color: rgb(247, 0, 0);
     text-shadow:
-  -2px -2px 0 var(--accent),
-   2px -2px 0 var(--accent),
-  -2px  2px 0 var(--accent),
-   2px  2px 0 var(--accent);
+  -2px -2px 0 rgb(247, 248, 248),
+   2px -2px 0 rgb(247, 248, 248),
+  -2px  2px 0 rgb(247, 248, 248),
+  -2px  2px 0 rgb(247, 248, 248),
+   2px  2px 0 rgb(247, 248, 248);
 margin-bottom: 10px;
     
 }
@@ -27,7 +28,7 @@ header p {
   line-height: 1.8;
   color: var(--text);
   text-align: center;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.541);
   box-shadow: 0 4px 12px #0002;
   border: 2px solid var(--accent);
   padding: 15px 25px;

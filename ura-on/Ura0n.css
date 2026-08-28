@@ -1,18 +1,20 @@
 :root {
-  --bg: #f2f0ff;
+  --bg: #df9ddf;
   --primary: #c59cff;
   --secondary: #ff9ecf;
-  --accent: #ffe48c;
+  --acdent:#f80000;
   --text: #3d3d50;
+  --shiro:#fafafa;
+  --aka:#f70707;
 }
 
 header h1 {font-size: 2.5em;
-    color: var(--primary);
+    color: var(--aka);
     text-shadow:
-  -2px -2px 0 var(--accent),
-   2px -2px 0 var(--accent),
-  -2px  2px 0 var(--accent),
-   2px  2px 0 var(--accent);
+  -2px -2px 0 var(--shiro),
+   2px -2px 0 var(--shiro),
+  -2px  2px 0 var(--shiro),
+   2px  2px 0 var(--shiro);
 margin-bottom: 10px;
     
 }
@@ -35,7 +37,7 @@ header p {
   backdrop-filter: blur(5px);
 }
 .creadores {
-  background: linear-gradient(to bottom, var(--accent), var(--secondary));
+  background: linear-gradient(to bottom, var(--aka), var(--secondary));
   color: var(--text);
   border: 1px solid #fff;
   box-shadow: 0 4px 12px #0002;
@@ -78,8 +80,8 @@ body {
       background: var(--bg);
       padding: 30px;
       border-radius: 12px;
-      border: 3px dashed var(--secondary);
-      color: var(--text);
+      border: 3px dashed var(--aka);
+      color: var(--aka);
       text-align: center;
       width: 90%;
       max-width: 400px;
@@ -103,7 +105,7 @@ body {
     .popup span {
       color: var(--primary); 
       font-weight: bold;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.952);
     }
 
     
