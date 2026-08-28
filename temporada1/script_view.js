@@ -102,17 +102,17 @@ function setupThemeToggle() {
   toggleBtn.id = 'theme-toggle';
   toggleBtn.innerHTML = '(─‿‿─) Activar Modo Oscuro';
   toggleBtn.style.position = 'fixed';
-  toggleBtn.style.bottom = '20px'; // poner en bottom-left para que no tape los logos
-  toggleBtn.style.left = '20px';
+  toggleBtn.style.bottom = '440px'; // poner en bottom-left para que no tape los logos
+  toggleBtn.style.left = '5px';
   toggleBtn.style.zIndex = '10000';
-  toggleBtn.style.background = 'var(--primary)';
-  toggleBtn.style.color = '#fff';
+  toggleBtn.style.background = 'var(--modeteme)';
+  toggleBtn.style.color = '#da8ee4';
   toggleBtn.style.border = '2px solid #fff';
   toggleBtn.style.padding = '10px 15px';
-  toggleBtn.style.borderRadius = '20px';
+  toggleBtn.style.borderRadius = '15px';
   toggleBtn.style.cursor = 'pointer';
   toggleBtn.style.fontWeight = 'bold';
-  toggleBtn.style.boxShadow = '0 4px 12px #0002';
+  toggleBtn.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.49)';
 
   document.body.appendChild(toggleBtn);
 

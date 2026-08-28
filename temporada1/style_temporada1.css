@@ -1,9 +1,14 @@
 :root {
-  --bg: #f2f0ff;
+  --bg: #df9ddf;
   --primary: #c59cff;
   --secondary: #ff9ecf;
   --accent: #f7f7f1f3;
   --text: #3d3d50;
+  --modeteme: #f2f2f856;
+  --shiro: #ffffff;
+  --aka: #fd0000;
+  
+
 }
 
 header h1 {font-size: 2.5em;
@@ -26,11 +31,11 @@ header p {
   margin: 0 auto 30px auto;
   font-size: 1.1em;
   line-height: 1.8;
-  color: var(--text);
+  color: var(--shiro);
   text-align: center;
-  background: rgba(255, 255, 255, 0.541);
-  box-shadow: 0 4px 12px #0002;
-  border: 2px solid var(--accent);
+  background: rgb(245, 118, 188);
+  box-shadow: 0 4px 12px rgb(253, 4, 4);
+  border: 2px solid var(--aka);
   padding: 15px 25px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
@@ -39,7 +44,7 @@ header p {
   background: linear-gradient(to bottom, var(--accent), var(--secondary));
   color: var(--text);
   border: 1px solid #fff;
-  box-shadow: 0 4px 12px #0002;
+  box-shadow: 0 4px 12px rgba(247, 3, 3, 0.507);
   padding: 10px 20px;
   border-radius: 12px;
   cursor: pointer;
@@ -76,11 +81,11 @@ body {
 
     
     .popup {
-      background: var(--bg);
+      background: rgba(7, 7, 7, 0.322);
       padding: 30px;
       border-radius: 12px;
-      border: 3px dashed var(--secondary);
-      color: var(--text);
+      border: 3px dashed var(--aka);
+      color: var(--shiro);
       text-align: center;
       width: 90%;
       max-width: 400px;
@@ -102,7 +107,7 @@ body {
     }
 
     .popup span {
-      color: var(--primary); 
+      color: var(--aka); 
       font-weight: bold;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
@@ -256,7 +261,7 @@ main h3 {
 }
 
 .episode-card {
-    background-color: white;
+    background-color: rgba(243, 36, 0, 0.158);
     border-radius: 12px;
     box-shadow: 0 4px 12px #0002;
     border: 1px solid var(--accent);

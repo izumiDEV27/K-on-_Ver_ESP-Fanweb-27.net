@@ -34,7 +34,7 @@ popupOverlay.addEventListener('click', (e) => {
         localStorage.setItem("popupVisto", "true");
     }
 });
-const version = "1.0.6";//actualizar cada vez que agrege algo
+const version = "1.0.8";//actualizar cada vez que agrege algo
 if (localStorage.getItem("popupVersion") !== version) {
     popupOverlay.style.display = "flex";
 } else {

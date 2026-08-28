@@ -1,9 +1,12 @@
 :root {
-  --bg: #f2f0ff;
+  --bg: #e08bc7;
   --primary: #c59cff;
   --secondary: #ff9ecf;
   --accent: #ffe48c;
   --text: #3d3d50;
+  --aka:#fa0d05;
+  --shiro:#f7f4f4;
+  --modeteme:#fd04e846;
   
   --psp-color: #003399; /* Azul clásico PSP */
   --ps3-color: #e50012; /* Rojo clásico PS3, o el negro de Spider-Man font */
@@ -53,12 +56,12 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    color: var(--primary);
+    color: var(--shiro);
     text-shadow:
-      -2px -2px 0 var(--accent),
-       2px -2px 0 var(--accent),
-      -2px  2px 0 var(--accent),
-       2px  2px 0 var(--accent);
+      -2px -2px 0 var(--aka),
+       2px -2px 0 var(--aka),
+      -2px  2px 0 var(--aka),
+       2px  2px 0 var(--aka);
     margin-bottom: 10px;
 }
 
@@ -67,11 +70,11 @@ header p {
     margin: 0 auto 30px auto;
     font-size: 1.1em;
     line-height: 1.8;
-    color: var(--text);
+    color: var(--shiro);
     text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 12px #0002;
-    border: 2px solid var(--accent);
+    background: rgba(245, 2, 2, 0.425);
+    box-shadow: 0 4px 12px rgb(252, 3, 3);
+    border: 2px solid var(--aka);
     padding: 15px 25px;
     border-radius: 12px;
     backdrop-filter: blur(5px);
@@ -111,9 +114,9 @@ main {
 
 /* SECTIONS DE JUEGOS */
 .game-section {
-    background-color: white;
+    background-color: rgba(252, 0, 0, 0.404);
     border-radius: 12px;
-    box-shadow: 0 4px 12px #0002;
+    box-shadow: 0 4px 12px rgba(2, 2, 2, 0.966);
     border: 1px solid var(--accent);
     overflow: hidden;
     display: flex;
