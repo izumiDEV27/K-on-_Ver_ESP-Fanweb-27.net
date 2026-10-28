@@ -27,13 +27,13 @@
             <div class="mensaje-emergente">
                 <h3 class="progreso-titulo">PROGRESO</h3>
                 <ul class="progreso-lista">
-                    <li><span>⇒</span> segunda temporada pendiente</li>
-                    <li><span>⇒</span> Arreglos: visuales y navegación mobile</li>
+                    <li><span>⇒</span> contador real</li>
+                    <li><span>⇒</span> comentarios lobby</li>
                     <li><span>⇒</span> Trabajando en Datos curiosos de k-on!</li>
                     <li><span>⇒</span> Resolviendo mas bugs visuales y malas practicas XD</li>
                     <li><span>⇒</span> Mensaje emergente resuelto</li>
                     <li><span>⇒</span> Ura-on terminado</li>
-                    
+
                 </ul>
             </div>
 
@@ -121,7 +121,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; wel-shae"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
             </div>
-            
+
             <!-- Elemento HTML Embebido (Video de YouTube) -->
             <div class="carousel-item" onclick="openLightbox(this.querySelector('iframe'))">
                 <div class="iframe-overlay"></div>
@@ -175,7 +175,8 @@
     <div class="merch-section">
         <div class="merch-content">
             <h2>Apoya Comprando Merch Oficial</h2>
-            <p class="subtitle">Adquiere figuras, CDs, Blu-rays y productos exclusivos de K-ON! para apoyar a la obra.</p>
+            <p class="subtitle">Adquiere figuras, CDs, Blu-rays y productos exclusivos de K-ON! para apoyar a la obra.
+            </p>
 
             <div class="merch-image-container">
                 <img src="visual_elements/logouwu.png" alt="K-ON Merch Oficial"
@@ -322,28 +323,51 @@
         <!-- apartado de comunidad comentarios, que ves chismoso-->
         <p class="comunidadtxt">Apartado de comentarios</p>
 
-        <div id="disqus_thread"></div>
-        <script>
+        <!-- ================= SECCIÓN DE COMENTARIOS ================= -->
+        <section id="seccion-comentarios" class="comentarios-seccion">
+            <div class="comentarios-cabecera">
+                <h2>☕ Muro del Club de Música Ligera 🎸</h2>
+                <p>¡Deja tu saludo, opinión de la web o qué te pareció el anime!</p>
+            </div>
 
-            var disqus_config = function () {
-                this.page.url = "https://k-on-ver-esp-fanweb-27-net.vercel.app/", "https://k-on-ver-esp-fanweb-27-net.vercel.app";  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "home"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
+            <!-- Formulario para nuevo comentario -->
+            <form id="form-comentario" class="comentario-form">
+                <div class="form-fila">
+                    <input type="text" id="autor-nombre" placeholder="Tu apodo o nombre (opcional)" maxlength="35">
 
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://k-on-fanweb-esp.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-                Disqus.</a></noscript>
+                    <div class="avatar-selector">
+                        <span>Personaje:</span>
+                        <select id="autor-avatar">
+                            <option value="yui">🎸 Yui</option>
+                            <option value="mio">🎸 Mio</option>
+                            <option value="ritsu">🥁 Ritsu</option>
+                            <option value="mugi">🎹 Mugi</option>
+                            <option value="azusa">🎸 Azunyan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <textarea id="mensaje-texto" placeholder="Escribe tu comentario aquí (máx. 400 letras)..."
+                    maxlength="400" required></textarea>
+
+                <div class="form-acciones">
+                    <span id="contador-caracteres">400 restantes</span>
+                    <button type="submit" id="btn-enviar-comentario">Enviar comentario ✉️</button>
+                </div>
+                <p id="comentario-estado" class="estado-envio"></p>
+            </form>
+
+            <!-- Lista donde se renderizan los comentarios en vivo -->
+            <div id="lista-comentarios" class="lista-comentarios">
+                <p class="cargando-comentarios">Cargando comentarios...</p>
+            </div>
+        </section>
     </div>
+
     <!--こんたどる-->
     <div class="counter">
         <span>Keinoers visitantes</span>
-        <strong>9232</strong>
+        <strong id="contador-visitas">9232</strong>
         <span>desde la creación</span>
     </div>
 
@@ -374,7 +398,7 @@
             <p>
                 Las donaciones seran solamente para pagar un DOMINIO web, ya que queremos
                 llegar a todos, asi solo bastaria buscar en el navegador sin necesidad de el link explicito
-        
+
             </p>
 
         </div>
@@ -515,7 +539,8 @@
                 <div class="cardgit">
                     <img class="img" src="https://avatars.githubusercontent.com/u/127040840?v=4">
                     <span>Dev Izumi</span>
-                    <p class="info">Soy un dev otaku de la tecnologuía y software,<span>enfocado en desarrollo de bajo
+                    <p class="info">Soy un dev otaku de la tecnologuía y software,<span>enfocado en desarrollo de
+                            bajo
                             nivel</span>
                         odio las dependecias y frameworks, esta web es un espacio para fans, trato de mantener esa
                         nostalguía
@@ -605,6 +630,178 @@
 
     <!-- Vercel Speed Insights -->
     <script defer src="https://cdn.vercel-analytics.com/v1/speed-insights/script.js"></script>
+
+    <!-- Firebase SDK vía CDN Oficial (Vanilla JS Modular) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            query,
+            orderBy,
+            limit,
+            onSnapshot,
+            serverTimestamp,
+            doc,
+            getDoc,
+            setDoc,
+            increment
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+        // Reemplaza con tus datos de Firebase Console:
+        const firebaseConfig = {
+            apiKey: "AIzaSyC3xiKsGFEMF0IsfoLUY0Zfy0ME780cNZU",
+            authDomain: "kon-fanweb.firebaseapp.com",
+            projectId: "kon-fanweb",
+            storageBucket: "kon-fanweb.firebasestorage.app",
+            messagingSenderId: "889595472284",
+            appId: "1:889595472284:web:f0cd79ab45e61039f10059"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const comentariosRef = collection(db, "comentarios_lobby");
+
+        const avatares = {
+            yui: "https://media.tenor.com/GP4-PbCFonMAAAAi/yui-eyes.gif",
+            mio: "https://media1.tenor.com/m/o6oK40z23kYAAAAC/mio-akiyama-k-on.gif",
+            ritsu: "https://media1.tenor.com/m/0FIPjst00YUAAAAC/k-on-k-on-ritsu.gif",
+            mugi: "https://media.tenor.com/cOQf_tJ8YEsAAAAC/tsumugi-kotobuki-k-on.gif",
+            azusa: "https://media.tenor.com/T0b4_qI9u64AAAAC/azusa-nakano-k-on.gif"
+        };
+
+        // Escapar texto para prevenir XSS
+        function sanitizarHTML(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // Escuchar comentarios en tiempo real
+        const q = query(comentariosRef, orderBy("fecha", "desc"), limit(40));
+        const lista = document.getElementById("lista-comentarios");
+
+        onSnapshot(q, (snapshot) => {
+            if (snapshot.empty) {
+                lista.innerHTML = '<p class="sin-comentarios">¡Sé el primero en dejar un comentario! ☕</p>';
+                return;
+            }
+
+            lista.innerHTML = "";
+            snapshot.forEach((doc) => {
+                const data = doc.data();
+                const fechaStr = data.fecha?.toDate ? data.fecha.toDate().toLocaleDateString("es-ES", {
+                    day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit"
+                }) : "Reciente";
+
+                const avatarUrl = avatares[data.avatar] || avatares.yui;
+
+                const item = document.createElement("div");
+                item.className = "comentario-card";
+                item.innerHTML = `
+                <img src="${avatarUrl}" class="avatar-img" alt="${sanitizarHTML(data.avatar)}">
+                <div class="comentario-cuerpo">
+                    <div class="comentario-meta">
+                        <span class="comentario-autor">${sanitizarHTML(data.nombre)}</span>
+                        <span class="comentario-fecha">${fechaStr}</span>
+                    </div>
+                    <p class="comentario-texto">${sanitizarHTML(data.mensaje)}</p>
+                </div>
+            `;
+                lista.appendChild(item);
+            });
+        }, (error) => {
+            console.error("Error al obtener comentarios:", error);
+            lista.innerHTML = '<p class="error-comentarios">Error al cargar comentarios.</p>';
+        });
+
+        // Enviar comentario
+        const form = document.getElementById("form-comentario");
+        const textarea = document.getElementById("mensaje-texto");
+        const estado = document.getElementById("comentario-estado");
+        const contador = document.getElementById("contador-caracteres");
+
+        textarea.addEventListener("input", () => {
+            contador.textContent = `${400 - textarea.value.length} restantes`;
+        });
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const mensaje = textarea.value.trim();
+            let nombre = document.getElementById("autor-nombre").value.trim();
+            const avatar = document.getElementById("autor-avatar").value;
+
+            if (!mensaje) return;
+            if (!nombre) nombre = "Keioner Anónimo";
+
+            const btn = document.getElementById("btn-enviar-comentario");
+            btn.disabled = true;
+            btn.textContent = "Publicando...";
+            estado.textContent = "";
+
+            try {
+                await addDoc(comentariosRef, {
+                    nombre: nombre,
+                    mensaje: mensaje,
+                    avatar: avatar,
+                    fecha: serverTimestamp()
+                });
+
+                form.reset();
+                contador.textContent = "400 restantes";
+                estado.style.color = "#4ade80";
+                estado.textContent = "¡Comentario publicado con éxito! ✨";
+                setTimeout(() => { estado.textContent = ""; }, 4000);
+            } catch (err) {
+                console.error("Error al enviar comentario:", err);
+                estado.style.color = "#f87171";
+                estado.textContent = "Hubo un error al enviar tu comentario.";
+            } finally {
+                btn.disabled = false;
+                btn.textContent = "Enviar comentario ✉️";
+            }
+        });
+
+        // ==========================================
+        // CONTADOR DE VISITAS CON FIRESTORE
+        // ==========================================
+        const visitasDocRef = doc(db, "estadisticas", "visitas_lobby");
+        const contadorElem = document.getElementById("contador-visitas");
+
+        async function gestionarVisitas() {
+            try {
+                // Escuchar cambios en vivo del contador para mostrar el número actual
+                onSnapshot(visitasDocRef, (docSnap) => {
+                    if (docSnap.exists() && contadorElem) {
+                        const total = docSnap.data().total;
+                        contadorElem.textContent = Number(total).toLocaleString("es-ES");
+                    }
+                });
+
+                // Evitar que una misma persona sume visitas al recargar (usamos sessionStorage)
+                const yaContado = sessionStorage.getItem("visita_registrada");
+                if (!yaContado) {
+                    const docSnap = await getDoc(visitasDocRef);
+                    if (!docSnap.exists()) {
+                        // Inicializamos con la base de 9232 si aún no existe en Firebase
+                        await setDoc(visitasDocRef, { total: 9233 });
+                    } else {
+                        // Incremento atómico en 1
+                        await setDoc(visitasDocRef, { total: increment(1) }, { merge: true });
+                    }
+                    sessionStorage.setItem("visita_registrada", "true");
+                }
+            } catch (error) {
+                console.error("Error en contador de visitas:", error);
+                if (contadorElem && (contadorElem.textContent === "---" || !contadorElem.textContent)) {
+                    contadorElem.textContent = "9.232";
+                }
+            }
+        }
+
+        gestionarVisitas();
+    </script>
 </body>
 
 </html>
